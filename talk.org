@@ -1,6 +1,6 @@
 #+TITLE:  Resolving the chicken-and-egg problem in VO$_2$
 #+subtitle: A new paradigm for the Mott transition
-#+AUTHOR: Óscar Nájera^1, M. Civelli^1, V. Dobrosavljević^2, M. J. Rozenberg^1
+#+AUTHOR: Óscar Nájera
 #+EMAIL: najera.oscar@gmail.com
 #+DATE:   March 13, 2017 - New Orleans
 #+TAGS:
@@ -19,14 +19,14 @@
 
 #+OPTIONS: num:nil email:t toc:nil
 # #+OPTIONS: reveal_width:1200 reveal_height:800
-# Export an title
+# Export the title
 #+BEGIN_SRC emacs-lisp :results silent :exports none
   (setq org-reveal-title-slide "
 
   <h1 class=\"title\">%t</h1>
   <h2 class=\"subtitle\">%s</h2>
 
-  <h2 class=\"authors\">%a</h2>
+  <h2 class=\"authors\"><u><b>%a</b></u><sup>1</sup>, M. Civelli<sup>1</sup>, V. Dobrosavljević<sup>2</sup>, M. J. Rozenberg<sup>1</sup></h2>
     <h4 class=\"affiliation\">
       <sup>1</sup> Laboratoire de Physique des Solides, CNRS-UMR8502, Université Paris-Sud, Orsay 91405, France</br>
       <sup>2</sup> Department of Physics and National High Magnetic Field Laboratory, Florida State University, Tallahassee, FL 32306, USA</h4>
@@ -38,22 +38,16 @@
   <h2>%d</h2>")
   (org-reveal-export-to-html)
 #+END_SRC
-* The transition in VO$_2$
+* The transition in VO$_2$ Peierls vs. Mott
   :PROPERTIES:
   :Custom_ID: crystal
   :END:
 
 # Image from [[http://dx.doi.org/10.1103/physrevb.81.115117][Lazarovits, B. PRB, 81(11), 115117]]
 #+BEGIN_EXPORT html
-<div style="position: absolute; width: 411px; height: 476px; left: 7px; top: 140px;">
-  <div style="z-index: 12;">
-    <img data-natural-width="402" data-natural-height="466" data-src="images/vo2_resistivity_qa_sci.jpg"></div></div>
-<div style="position: absolute; width: 411px; height: 476px; left: 472px; top: 140px;">
-  <div style="z-index: 12;">
-    <img data-natural-width="402" data-natural-height="466" data-src="images/rutile_cell.png"></div></div>
-<div style="position: absolute; width: 425px; height: 476px; left: 466px; top: 140px;">
-  <div class="fragment" style="z-index: 13;" data-fragment-index="0">
-    <img data-natural-width="416" data-natural-height="466" data-src="images/monoclinic_cell.png"></div></div>
+<img height="260px" data-src="images/monoclinic_cell.png">
+<img height="260px" data-src="images/vo2_resistivity_qa_sci.jpg">
+<img height="260px" data-src="images/rutile_cell.png">
 #+END_EXPORT
 #+BEGIN_NOTES
 VO_2 is a very interesting transition metal oxide because it displays
@@ -71,6 +65,11 @@ Monoclinic and dimers form and inspire an alternative justification
 where the insulating behavior is attributed to this spin-Peierls
 structural instability.
 #+END_NOTES
+* Outline
+- Solve a reference model: The Dimer Hubbard Model
+  - Characterize the correlated Insulator to correlated Metal
+    transition using DMFT
+- Dimer-Mott Transition explains key experiments in the transition of VO_2
 * The Dimer Hubbard model
 #+attr_html: :height 400px
 [[file:images/dimer_lattice.svg]]
@@ -280,11 +279,10 @@ file:images/fig-arpes-ipt.png
 Read more on : [[http://dx.doi.org/10.1103/physrevb.95.035113][O. Nájera, et al. (2017). PRB, 95(3), 035113]]
 * Script                                                           :noexport:
 
-Good morning everyone. I would like to thank the chairman for the kind
-introduction and you all for coming to this first session early
-in the morning. I will be presenting our work towards resolving
-the chicken-and-egg problem in VO_2, and present to you a new paradigm
-in the Mott transition.
+Good morning everyone. I'm Oscar Najera and do my PhD with Marcelo
+Rozenberg in the laboratoire the Physique des solides in Paris. I will
+be presenting our work towards resolving the chicken-and-egg problem
+in VO_2, and present to you a new paradigm for the Mott transition.
 
 VO_2 is a very interesting transition metal oxide because it displays
 a Metal insulator transition close to room temperature. Making it
