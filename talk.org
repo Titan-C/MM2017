@@ -9,21 +9,17 @@
 #+LATEX_CLASS_OPTIONS: [a4paper,12pt]
 #+STARTUP: hideblocks
 
-# #+REVEAL_MARGIN: 0.1
-# #+REVEAL_MIN_SCALE: 0.5
-# #+REVEAL_MAX_SCALE: 1.0
-#+REVEAL_PLUGINS: (highlight notes)
+#+REVEAL_PLUGINS: (notes)
 #+REVEAL_TRANS: slide
 #+REVEAL_THEME: serif
+#+REVEAL_ROOT: /
 # #+REVEAL_ROOT: https://cdn.jsdelivr.net/reveal.js/3.0.0/
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="css/style.css" />
 #+REVEAL_EXTRA_CSS: https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css
 
-#+OPTIONS: toc:nil num:nil email:t
+#+OPTIONS: num:nil email:t
 # #+OPTIONS: reveal_width:1200 reveal_height:800
-#+REVEAL_HEAD_PREAMBLE: <link rel="stylesheet" type="text/css" href="css/style.css"/>
-
-* Export config                                                    :noexport:
+# Export an title
 #+BEGIN_SRC emacs-lisp :results silent :exports none
   (setq org-reveal-title-slide "
 
@@ -42,3 +38,340 @@
   <h2>%d</h2>")
   (org-reveal-export-to-html)
 #+END_SRC
+* The transition in VO$_2$
+  :PROPERTIES:
+  :Custom_ID: crystal
+  :END:
+
+# Image from [[http://dx.doi.org/10.1103/physrevb.81.115117][Lazarovits, B. PRB, 81(11), 115117]]
+#+BEGIN_EXPORT html
+<div style="position: absolute; width: 411px; height: 476px; left: 7px; top: 140px;">
+  <div style="z-index: 12;">
+    <img data-natural-width="402" data-natural-height="466" data-src="images/vo2_resistivity_qa_sci.jpg"></div></div>
+<div style="position: absolute; width: 411px; height: 476px; left: 472px; top: 140px;">
+  <div style="z-index: 12;">
+    <img data-natural-width="402" data-natural-height="466" data-src="images/rutile_cell.png"></div></div>
+<div style="position: absolute; width: 425px; height: 476px; left: 466px; top: 140px;">
+  <div class="fragment" style="z-index: 13;" data-fragment-index="0">
+    <img data-natural-width="416" data-natural-height="466" data-src="images/monoclinic_cell.png"></div></div>
+#+END_EXPORT
+#+BEGIN_NOTES
+VO_2 is a very interesting transition metal oxide because it displays
+a Metal insulator transition close to room temperature. Making it
+attractive for novel electronic devices. Explaining this transition
+remains a challenging endeavor, between our hand waving arguments to our
+most sophisticated bandstructure calculations great progress has been
+made to describe this material but not enough to settle the debate
+about the origins of its transition. VO_2 is a correlated metal at
+high temperature and one would argue for Mott transition to justify
+the insulator, where electrons localize due to the strong Coulomb
+repulsion they experience between eachother. Nevertheless at the
+transition temperature the crystal structure changes from rutile to
+Monoclinic and dimers form and inspire an alternative justification
+where the insulating behavior is attributed to this spin-Peierls
+structural instability.
+#+END_NOTES
+* The dimer model
+#+attr_html: :height 400px
+[[file:images/dimer_lattice.svg]]
+\begin{align}
+H=[ -t \sum_{\langle i, j\rangle \alpha\sigma}
+c^\dagger_{i\alpha\sigma} c_{j\alpha \sigma} +\ t_{\perp}
+\sum_{i\sigma} c^\dagger_{i1\sigma} c_{i2\sigma} + h.c. ]
++ \sum_{i\alpha} U n_{i\alpha\uparrow} n_{i\alpha\downarrow}
+\end{align}
+#+BEGIN_NOTES
+For our study we trade the complications of the real crystal structure
+and the orbital degeneracy of VO_2 for a model Hamiltonian where we
+focus on just few things. Take the fact that there is a preferred
+direction in the unit cell which gives the raise to dimer and build a
+single orbital Hubbard model out of it, the Dimer Hubbard Model. It
+will capture the key competition between Mott localization due to
+coulomb repulsion and the singlet dimerization. We will explore if a
+purely electronic transition takes place in this model, for which in
+this study the lattice will stay fixed. We will address the question
+if this purely electronic transition is of first order as a function
+of temperature within a relevant parameter region, having a bearing on
+the physics of VO_2. We will explore the physical nature of the
+different electronic states and relate our results to key available
+experiments.
+#+END_NOTES
+** DMFT
+  :PROPERTIES:
+  :Custom_ID: dmft
+  :END:
+#+attr_html: :height 400px
+[[file:images/dimer_lattice_dmft.svg]]
+
+\begin{equation}
+\label{eq:dimer_dmft}
+S_{eff}[\mathbf{c}_\sigma,\mathbf{c}^*_\sigma]=\Sigma_{\sigma,i\omega_n}\mathbf{c}^*_{n\sigma}\mathbf{G}_0^{-1}\mathbf{c}_{n\sigma}+U\int_0^\beta d\tau \Sigma_{\alpha=1,2} n_{\alpha,\uparrow}n_{\alpha,\downarrow}
+\end{equation}
+
+\begin{equation}
+\label{eq:dimer_weiss}
+\mathbf{G}_0^{-1}(i\omega_n)= \left( \begin{array}{cc}
+i\omega_n  & -t_\perp \\
+-t_\perp  &  i\omega_n \end{array} \right)
+- t^2 \mathbf{G}(i\omega_n),
+\end{equation}
+
+* Phase diagram $T=0$
+[[file:images/IPT_dimerT0.png]]
+** $t_\perp=0$
+  :PROPERTIES:
+  :Custom_ID: ssdiag
+  :END:
+#+BEGIN_EXPORT html
+<div style="position: absolute; width: 250px; height: 200px; left: 20px; top: 20px;">
+  <div style="z-index: 12;">
+    <img data-src="images/IPT_dimerT0l0.png"></div></div>
+#+END_EXPORT
+[[file:images/IPT_dimertp0.png]]
+** $t_\perp=0.3$
+#+BEGIN_EXPORT html
+<div style="position: absolute; width: 250px; height: 200px; left: 20px; top: 20px;">
+  <div style="z-index: 12;">
+    <img data-src="images/IPT_dimerT0l3.png"></div></div>
+#+END_EXPORT
+[[file:images/IPT_dimertp03.png]]
+
+** Effective Dimerization
+  :PROPERTIES:
+  :Custom_ID: tpeff
+  :END:
+#+BEGIN_EXPORT html
+<div style="position: absolute; width: 250px; height: 200px; left: 620px; top: 60px;">
+  <div style="z-index: 12;">
+    <img data-src="images/IPT_dimertp03_ss.png"></div></div>
+#+END_EXPORT
+[[file:images/IPT_tpeff.png]]
+
+* Electronic Structure
+#+attr_html: :height 550px
+file:images/fig-arpes-ipt.png
+
+** Optical conductivity
+
+#+BEGIN_SRC python :exports none :results silent
+  from __future__ import (absolute_import, division, print_function,
+                          unicode_literals)
+
+  import matplotlib.pyplot as plt
+  import numpy as np
+  plt.matplotlib.rcParams.update({'axes.labelsize': 22,
+                                  'xtick.labelsize': 14, 'ytick.labelsize': 14,
+                                  'axes.titlesize': 22})
+
+  import dmft.common as gf
+  import dmft.dimer as dimer
+  import dmft.ipt_imag as ipt
+
+  from dmft.utils import optical_conductivity
+  from slaveparticles.quantum.operators import fermi_dist
+
+
+  def ipt_u_tp(u_int, tp, beta, seed='ins'):
+      tau, w_n = gf.tau_wn_setup(dict(BETA=beta, N_MATSUBARA=2**12))
+      giw_d, giw_o = dimer.gf_met(w_n, 0., 0., 0.5, 0.)
+      if seed == 'ins':
+          giw_d, giw_o = 1 / (1j * w_n + 4j / w_n), np.zeros_like(w_n) + 0j
+
+      giw_d, giw_o, _ = dimer.ipt_dmft_loop(
+          beta, u_int, tp, giw_d, giw_o, tau, w_n, 1e-13)
+      g0iw_d, g0iw_o = dimer.self_consistency(
+          1j * w_n, 1j * giw_d.imag, giw_o.real, 0., tp, 0.25)
+      siw_d, siw_o = ipt.dimer_sigma(u_int, tp, g0iw_d, g0iw_o, tau, w_n)
+
+      return siw_d, siw_o, w_n
+
+
+  def optical_cond(ss, sa, tp, w, beta):
+      nuv = w[w > 0]
+      zerofreq = len(nuv)
+      dw = w[1] - w[0]
+      E = np.linspace(-1, 1, 61)
+      dos = np.exp(-2 * E**2) / np.sqrt(np.pi / 2)
+      de = E[1] - E[0]
+      dosde = (dos * de).reshape(-1, 1)
+      nf = fermi_dist(w, beta)
+      eta = 0.8
+
+      lat_Aa = (-1 / np.add.outer(-E, w + tp + 4e-2j - sa)).imag / np.pi
+      lat_As = (-1 / np.add.outer(-E, w - tp + 4e-2j - ss)).imag / np.pi
+      #lat_Aa = .5 * (lat_Aa + lat_As)
+      #lat_As = lat_Aa
+
+      a = optical_conductivity(lat_Aa, lat_Aa, nf, w, dosde)
+      a += optical_conductivity(lat_As, lat_As, nf, w, dosde)
+      b = optical_conductivity(lat_Aa, lat_As, nf, w, dosde)
+      b += optical_conductivity(lat_As, lat_Aa, nf, w, dosde)
+
+      #b *= tp**2 * eta**2 / 2 / .25
+
+      sigma_E_sum_a = .5 * a[w > 0]
+      sigma_E_sum_i = .5 * b[w > 0]
+      sigma_E_sum = .5 * (a + b)[w > 0]
+
+      return sigma_E_sum_a, sigma_E_sum_i, sigma_E_sum, nuv
+
+
+  def plot_spectra_multi(u_int, tp, beta, seed, axe):
+      siw_d, siw_o, w_n = ipt_u_tp(u_int, tp, beta, seed)
+      ss, sa = dimer.pade_diag(1j * siw_d.imag, siw_o.real, w_n, w_set, w)
+      gsts = gf.semi_circle_hiltrans(w - tp - (ss.real - 1j * np.abs(ss.imag)))
+      gsta = gf.semi_circle_hiltrans(w + tp - (sa.real - 1j * np.abs(sa.imag)))
+      gloc = 0.5 * (gsta + gsts)
+
+      axe[0].plot(w, -gloc.imag / np.pi)
+      axe[0].set_xlim(-3, 3)
+      axe[1].plot(w, -gsta.imag / np.pi)
+      axe[1].plot(w, -gsts.imag / np.pi)
+      axe[1].set_xlim(-3, 3)
+
+      sm_a, sm_i, sm, nuv = optical_cond(ss, sa, tp, w, beta)
+      axe[2].plot(nuv, sm_a, '--')
+      axe[2].plot(nuv, sm_i, ':')
+      axe[2].plot(nuv, sm, '-')
+      axe[2].set_xlim(0, 2)
+
+
+  def label(ax):
+      ax[0].set_ylabel(r'$A_{11}(\omega)$')
+      ax[1].set_ylabel(r'$A_{B/A}(\omega)$')
+      ax[2].set_ylabel(r'$\sigma(\omega)$')
+      ax[0].set_xlabel(r'$\omega$')
+      ax[1].set_xlabel(r'$\omega$')
+      ax[2].set_xlabel(r'$\omega$')
+
+  # fig, ax = plt.subplots(3, 2, sharex=True, sharey=True)
+  fig, ax = plt.subplots(2, 3, figsize=(10, 8), sharey=True)
+
+  fig.subplots_adjust(hspace=0.04)
+  w_set = np.arange(150)
+  w = np.linspace(-3, 3, 1000)
+  plot_spectra_multi(2.5, .3, 100, 'met', ax[0])
+  plot_spectra_multi(2.5, .3, 100, 'ins', ax[1])
+  label(ax[0])
+  label(ax[1])
+  ax[0, 2].set_ylim(0, 0.7)
+  ax[0, 2].annotate(r"MIR $\omega \approx 0.22$ eV",
+                    xy=(0.23, 0.62), arrowprops=dict(arrowstyle='->'), xytext=(0.42, 0.6))
+  plt.savefig('images/IPT_AB_spectra.png')
+#+END_SRC
+#+attr_html: :height 550px :width 960px
+[[file:images/IPT_AB_spectra.png]]
+* Triggering the transition
+  :PROPERTIES:
+  :Custom_ID: SNIM
+  :END:
+
+[[http://dx.doi.org/10.1126/science.1150124][Qazilbash Science (2007), 318(5857), 1750–1753]]
+#+BEGIN_EXPORT html
+<img src="images/SNIM-heat.jpg" alt="SNIM-heat.jpg" height="260px" />
+<img src="images/vo2_lowe_optics_qa_sci.jpg" alt="vo2_lowe_optics_qa_sci.jpg" height="260px" />
+<img src="images/expm_optics.png" alt="expm_optics.png" height="260px" />
+#+END_EXPORT
+
+* Script                                                           :noexport:
+
+VO_2 is a very interesting transition metal oxide because it displays
+a Metal insulator transition close to room temperature. Making it
+attractive for novel electronic devices. Explaining this transition
+remains a challenging endeavor, between our hand waving arguments to our
+most sophisticated bandstructure calculations great progress has been
+made to describe this material but not enough to settle the debate
+about the origins of its transition. VO_2 is a correlated metal at
+high temperature and one would argue for Mott transition to justify
+the insulator, where electrons localize due to the strong Coulomb
+repulsion they experience between eachother. Nevertheless at the
+transition temperature the crystal structure changes from rutile to
+Monoclinic and dimers form and inspire an alternative justification
+where the insulating behavior is attributed to this spin-Peierls
+structural instability.
+
+For our study we trade the complications of the real crystal structure
+and the orbital degeneracy of VO$_2$ for a model Hamiltonian where we
+focus on just few things. Take the fact that there is a preferred
+direction in the unit cell which gives the raise to dimer and build a
+single orbital Hubbard model out of it, the Dimer Hubbard Model. It
+will capture the key competition between Mott localization due to
+coulomb repulsion and the singlet dimerization. We will explore if a
+purely electronic transition takes place in this model, for which in
+this study the lattice will stay fixed. We will address the question
+if this purely electronic transition is of first order as a function
+of temperature within a relevant parameter region, having a bearing on
+the physics of VO_2. We will explore the physical nature of the
+different electronic states and relate our results to key available
+experiments.
+
+The present lattice model as such is currently imposible to solve.
+Using Dynamical mean field theory we can treat it as a dimer impurity
+problem embedded in a self-consistent bath and solve this alternative
+problem exactly. DMFT is exact in infinite dimensions and yields the
+generic behavior of a high-dimensional lattice, independent of the
+lattice geometry used within the calculation. The energy scales are
+renormalized for different geometries and for simplicity we adopt a
+semicircular density of state and set the energy unit to its
+half-bandwidth $D$.
+
+I first show you a zero temperature phase diagram, where the color
+scale is the density of states at the Fermi level and we have captured
+the competition between electronic correlations giving rise to the
+metal to Mott insulator transition which is first order in character,
+as displayed by this hysteresis region. And at the same time the
+transition produced by dimerization taking you smoothly from a metal
+to a band insulator. The intermediate region conects this two types of
+insulator you can still see a first order transition to the mott
+insulator and how this is connected to the band insulator
+
+The coexistence region gradually shrinks as temperature is increased.
+We recover the well known single-band Hubbard model result, where the
+coexistence region is a triangle tilted to the left indicating that
+upon heating you cross the first order line from a correlated Metal to
+an insulator. This behavior has been associated to the transition in
+Cr- doped V_2O_3. As the dimerization strength is increased the
+coexistence region changes its tilt towards the right signaling that
+dimerization changes the stability of the system. At $t_\perp=0.3$ the
+Metal insulator transition is reversed to the previous case enabling
+for a low temperature insulator to turn metallic as temperature is
+risen just like VO_2.
+
+What can be said about this transition. I'll follow a representative
+quatity, the effective dimerization strength which is the bare
+dimerization energy enhanced by the real Part of the intersite
+self-energy. You can see how it weakly enhances the metal at all
+temperatures, but for the insulator it becomes strongly booosted. This
+is an electronic dimerization.
+
+What does it look like? Look at the electronic structure of Insulator
+within the coexistence region, it has incoherent Hubbard bands which
+are the signature of Mott physics. But it also has coherent bands
+coexisting.  The metal shows a split quasiparticle
+peaks. How does this link to the transition? In the OPtical
+conductivity the insulator is quite simple between all interband and
+intraband transitions are allowed after overcoming the optical
+gap. But I show you the components of this bonding in anti-bonding
+bands because in the dimer Metal it gives a new behavior. Aside from
+the characteristic Drude response the presence of this split
+quasiparticle peak will allow from an inter band transition between
+this two and excibit this Mid-Infrared-peak. at 0.22eV.
+
+But are there experiments for this? Yes, this first experiments
+conducted in Basov's group they perform Infrared spectroscopy on a VO2
+as it is heated accross the transition and measure the optical
+conductivity of the Metall puddles that form and have show a response
+very different from the high temperature rutile metal. And they show
+this MIR peak. Even this new experiments in Martin Dressel group
+without pinpointing at the metal puddles at the transtion a generic
+view gives you this resonance, which is the signatures of the dimer
+metal and our argument why the Mott Mecanins dominates the Insulator
+to metal transition in VO2.
+
+If you are doing pump probe experimens on VO2, were you trigger a
+photo induced transition know that the dimer metal coexist with the
+insulator at all temperatures, look at the optical conductivity and
+look for this peak because is strongly frequency dependent.
+
+Thank you for you attention, I'm open for questions now and over this
+week. Also I'm looking for PostDoc positions
