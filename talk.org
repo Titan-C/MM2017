@@ -17,7 +17,7 @@
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="css/style.css" />
 #+REVEAL_EXTRA_CSS: https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css
 
-#+OPTIONS: num:nil email:t
+#+OPTIONS: num:nil email:t toc:nil
 # #+OPTIONS: reveal_width:1200 reveal_height:800
 # Export an title
 #+BEGIN_SRC emacs-lisp :results silent :exports none
@@ -31,9 +31,9 @@
       <sup>1</sup> Laboratoire de Physique des Solides, CNRS-UMR8502, Université Paris-Sud, Orsay 91405, France</br>
       <sup>2</sup> Department of Physics and National High Magnetic Field Laboratory, Florida State University, Tallahassee, FL 32306, USA</h4>
 
-  <h3><i class=\"fa fa-envelope\" aria-hidden=\"true\"></i> %e / <a href=\"http://github.com/Titan-C\">
+  <!-- <h3><i class=\"fa fa-envelope\" aria-hidden=\"true\"></i> %e / <a href=\"http://github.com/Titan-C\">
   <i class=\"fa fa-github\" aria-hidden=\"true\"></i>
-  Titan-C</a></h3>
+  Titan-C</a></h3> -->
 
   <h2>%d</h2>")
   (org-reveal-export-to-html)
@@ -118,7 +118,7 @@ i\omega_n  & -t_\perp \\
 
 * Phase diagram $T=0$
 [[file:images/IPT_dimerT0.png]]
-** $t_\perp=0$
+** $t_\perp/D=0$
   :PROPERTIES:
   :Custom_ID: ssdiag
   :END:
@@ -128,7 +128,9 @@ i\omega_n  & -t_\perp \\
     <img data-src="images/IPT_dimerT0l0.png"></div></div>
 #+END_EXPORT
 [[file:images/IPT_dimertp0.png]]
-** $t_\perp=0.3$
+
+** $t_\perp/D=0.3$
+
 #+BEGIN_EXPORT html
 <div style="position: absolute; width: 250px; height: 200px; left: 20px; top: 20px;">
   <div style="z-index: 12;">
@@ -261,19 +263,28 @@ file:images/fig-arpes-ipt.png
 #+END_SRC
 #+attr_html: :height 550px :width 960px
 [[file:images/IPT_AB_spectra.png]]
-* Triggering the transition
+* Optical conductivity at the transition
   :PROPERTIES:
   :Custom_ID: SNIM
   :END:
 
-[[http://dx.doi.org/10.1126/science.1150124][Qazilbash Science (2007), 318(5857), 1750–1753]]
+[[http://dx.doi.org/10.1126/science.1150124][Qazilbash et al., Science (2007), 318(5857), 1750–1753]]
 #+BEGIN_EXPORT html
 <img src="images/SNIM-heat.jpg" alt="SNIM-heat.jpg" height="260px" />
 <img src="images/vo2_lowe_optics_qa_sci.jpg" alt="vo2_lowe_optics_qa_sci.jpg" height="260px" />
 <img src="images/expm_optics.png" alt="expm_optics.png" height="260px" />
+<img src="images/vo2_trans_optics.jpg" alt="Optical conductivity at the transition" height="220px" />
 #+END_EXPORT
+* Thank you for your attention
 
+Read more on : [[http://dx.doi.org/10.1103/physrevb.95.035113][O. Nájera, et al. (2017). PRB, 95(3), 035113]]
 * Script                                                           :noexport:
+
+Good morning everyone. I would like to thank the chairman for the kind
+introduction and you all for coming to this first session this early
+in the morning. I will be presenting our endeavors towards resolving
+the chicken-and-egg problem in VO_2, and present to you a new paradigm
+in the Mott transition.
 
 VO_2 is a very interesting transition metal oxide because it displays
 a Metal insulator transition close to room temperature. Making it
@@ -282,12 +293,12 @@ remains a challenging endeavor, between our hand waving arguments to our
 most sophisticated bandstructure calculations great progress has been
 made to describe this material but not enough to settle the debate
 about the origins of its transition. VO_2 is a correlated metal at
-high temperature and one would argue for Mott transition to justify
-the insulator, where electrons localize due to the strong Coulomb
-repulsion they experience between eachother. Nevertheless at the
+high temperature and one would argue for a Mott transition to justify
+the insulating behavior, where electrons localize due to the strong Coulomb
+repulsion they experience between each other. Nevertheless at the
 transition temperature the crystal structure changes from rutile to
-Monoclinic and dimers form and inspire an alternative justification
-where the insulating behavior is attributed to this spin-Peierls
+Monoclinic and dimers form which inspire an alternative justification
+to the insulating behavior and attribute it to this spin-Peierls
 structural instability.
 
 For our study we trade the complications of the real crystal structure
@@ -305,14 +316,15 @@ the physics of VO_2. We will explore the physical nature of the
 different electronic states and relate our results to key available
 experiments.
 
-The present lattice model as such is currently imposible to solve.
+The presented lattice model as such is currently imposible to solve.
 Using Dynamical mean field theory we can treat it as a dimer impurity
-problem embedded in a self-consistent bath and solve this alternative
-problem exactly. DMFT is exact in infinite dimensions and yields the
-generic behavior of a high-dimensional lattice, independent of the
-lattice geometry used within the calculation. The energy scales are
-renormalized for different geometries and for simplicity we adopt a
-semicircular density of state and set the energy unit to its
+problem embedded in a self-consistent bath which represents the
+lattice degrees of freedom in mean-field, we can solve this
+alternative problem exactly. DMFT is exact in infinite dimensions and
+yields the generic behavior of a high-dimensional lattice, independent
+of the lattice geometry used within the calculation. The energy scales
+are renormalized for different geometries and for simplicity we adopt
+a semicircular density of state and set the energy unit to its
 half-bandwidth $D$.
 
 I first show you a zero temperature phase diagram, where the color
@@ -325,48 +337,54 @@ to a band insulator. The intermediate region conects this two types of
 insulator you can still see a first order transition to the mott
 insulator and how this is connected to the band insulator
 
-The coexistence region gradually shrinks as temperature is increased.
-We recover the well known single-band Hubbard model result, where the
+When analyzing The coexistence region in temperature we see that it
+gradually shrinks as temperature is increased. At zero dimerization we
+recover the well known single-band Hubbard model result, where the
 coexistence region is a triangle tilted to the left indicating that
 upon heating you cross the first order line from a correlated Metal to
 an insulator. This behavior has been associated to the transition in
 Cr- doped V_2O_3. As the dimerization strength is increased the
 coexistence region changes its tilt towards the right signaling that
 dimerization changes the stability of the system. At $t_\perp=0.3$ the
-Metal insulator transition is reversed to the previous case enabling
+Metal insulator transition is reversed from the previous case enabling
 for a low temperature insulator to turn metallic as temperature is
 risen just like VO_2.
 
-What can be said about this transition. I'll follow a representative
-quatity, the effective dimerization strength which is the bare
-dimerization energy enhanced by the real Part of the intersite
-self-energy. You can see how it weakly enhances the metal at all
-temperatures, but for the insulator it becomes strongly booosted. This
-is an electronic dimerization.
+What can be said about this transition, what makes it different? I'll
+follow a representative quatity, the effective dimerization strength
+which is the bare dimerization energy enhanced by the real Part of the
+intersite self-energy at zero frequency. You can see how it weakly
+enhances the metal at all temperatures, but for the insulator it is
+strongly booosted. This is an electronic dimerization. The structural
+transition is therefore not a reason but is a consequence of the
+electronic transition. It is the arrangement of the system after the
+electrons prefer to Mott localize.
 
 What does it look like? Look at the electronic structure of Insulator
 within the coexistence region, it has incoherent Hubbard bands which
 are the signature of Mott physics. But it also has coherent bands
-coexisting.  The metal shows a split quasiparticle
-peaks. How does this link to the transition? In the OPtical
-conductivity the insulator is quite simple between all interband and
-intraband transitions are allowed after overcoming the optical
-gap. But I show you the components of this bonding in anti-bonding
-bands because in the dimer Metal it gives a new behavior. Aside from
-the characteristic Drude response the presence of this split
-quasiparticle peak will allow from an inter band transition between
-this two and excibit this Mid-Infrared-peak. at 0.22eV.
+coexisting.  The metal shows a split quasiparticle band crossing the
+Fermi energy at w=0, and this quasiparticles can be thought as the
+renormalization of the non-interacting bandstructure. At high energies
+we find the Hubbard bands.
 
-But are there experiments for this? Yes, this first experiments
-conducted in Basov's group they perform Infrared spectroscopy on a VO2
-as it is heated accross the transition and measure the optical
-conductivity of the Metall puddles that form and have show a response
-very different from the high temperature rutile metal. And they show
-this MIR peak. Even this new experiments in Martin Dressel group
-without pinpointing at the metal puddles at the transtion a generic
-view gives you this resonance, which is the signatures of the dimer
-metal and our argument why the Mott Mecanins dominates the Insulator
-to metal transition in VO2.
+How does this link to the transition? In
+the OPtical conductivity the insulator is quite simple between all
+interband and intraband transitions are allowed after overcoming the
+optical gap. But I show you the components of this bonding in
+anti-bonding bands because in the dimer Metal it gives a new
+behavior. Aside from the characteristic Drude response the presence of
+this split quasiparticle peak will allow from an inter band transition
+between this two and excibit this Mid-Infrared-peak. at 0.22eV.
+
+But are there experiments for this? Yes, this experiment conducted in
+Basov's group they perform Infrared spectroscopy on a VO_2 as it is
+heated accross the transition and measure the optical conductivity of
+the Metallic puddles that form, which show a response very different
+from the high temperature rutile metal, they show this MIR peak. This
+is the signature of the dimer metal and our argument why the Mott
+Mechanism dominates the Insulator to metal transition in VO2.
+
 
 If you are doing pump probe experimens on VO2, were you trigger a
 photo induced transition know that the dimer metal coexist with the
@@ -374,4 +392,5 @@ insulator at all temperatures, look at the optical conductivity and
 look for this peak because is strongly frequency dependent.
 
 Thank you for you attention, I'm open for questions now and over this
-week. Also I'm looking for PostDoc positions
+week. You can read more from our recent publication. Also I'm looking
+for PostDoc positions
