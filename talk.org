@@ -71,7 +71,7 @@ Monoclinic and dimers form and inspire an alternative justification
 where the insulating behavior is attributed to this spin-Peierls
 structural instability.
 #+END_NOTES
-* The dimer model
+* The Dimer Hubbard model
 #+attr_html: :height 400px
 [[file:images/dimer_lattice.svg]]
 \begin{align}
@@ -96,7 +96,7 @@ the physics of VO_2. We will explore the physical nature of the
 different electronic states and relate our results to key available
 experiments.
 #+END_NOTES
-** DMFT
+** Dynamical Mean Field Theory of the Dimer Hubbard Model
   :PROPERTIES:
   :Custom_ID: dmft
   :END:
@@ -281,61 +281,66 @@ Read more on : [[http://dx.doi.org/10.1103/physrevb.95.035113][O. Nájera, et al
 * Script                                                           :noexport:
 
 Good morning everyone. I would like to thank the chairman for the kind
-introduction and you all for coming to this first session this early
-in the morning. I will be presenting our endeavors towards resolving
+introduction and you all for coming to this first session early
+in the morning. I will be presenting our work towards resolving
 the chicken-and-egg problem in VO_2, and present to you a new paradigm
 in the Mott transition.
 
 VO_2 is a very interesting transition metal oxide because it displays
 a Metal insulator transition close to room temperature. Making it
 attractive for novel electronic devices. Explaining this transition
-remains a challenging endeavor, between our hand waving arguments to our
-most sophisticated bandstructure calculations great progress has been
-made to describe this material but not enough to settle the debate
-about the origins of its transition. VO_2 is a correlated metal at
-high temperature and one would argue for a Mott transition to justify
-the insulating behavior, where electrons localize due to the strong Coulomb
-repulsion they experience between each other. Nevertheless at the
-transition temperature the crystal structure changes from rutile to
-Monoclinic and dimers form which inspire an alternative justification
-to the insulating behavior and attribute it to this spin-Peierls
-structural instability.
+remains a challenging endeavor, between our hand waving arguments to
+our most sophisticated bandstructure calculations great progress has
+been made to describe this material but not enough to settle the
+debate about the origins of its transition. VO_2 is a correlated metal
+at high temperature with a rutile crystal structure and one would
+argue for a Mott transition to justify the insulating behavior at low
+temperatures, where electrons localize due to the strong Coulomb
+repulsion they experience between each other.
+
+Nevertheless at the transition temperature the crystal structure
+changes from rutile to Monoclinic and dimers form which has inspired
+an alternative justification to the insulating behavior and attribute
+it to this spin-Peierls structural instability.
 
 For our study we trade the complications of the real crystal structure
 and the orbital degeneracy of VO$_2$ for a model Hamiltonian where we
 focus on just few things. Take the fact that there is a preferred
 direction in the unit cell which gives the raise to dimer and build a
-single orbital Hubbard model out of it, the Dimer Hubbard Model. It
-will capture the key competition between Mott localization due to
-coulomb repulsion and the singlet dimerization. We will explore if a
-purely electronic transition takes place in this model, for which in
-this study the lattice will stay fixed. We will address the question
-if this purely electronic transition is of first order as a function
-of temperature within a relevant parameter region, having a bearing on
-the physics of VO_2. We will explore the physical nature of the
-different electronic states and relate our results to key available
-experiments.
+single orbital Hubbard model out of it, the Dimer Hubbard Model. Where
+you have electron hopping between the lattice sites, a dimerization
+energy and an onsite Hubbard repulsion. This model will capture the
+key competition between Mott localization due to Coulomb repulsion and
+the singlet dimerization. We will explore if a purely electronic
+transition takes place in this model, for which in this study the
+lattice will stay fixed. We will address the question if this purely
+electronic transition is of first order as a function of temperature
+within a relevant parameter region, having a bearing on the physics of
+VO_2. We will explore the physical nature of the different electronic
+states it presents and relate our results to key available experiments.
 
 The presented lattice model as such is currently imposible to solve.
 Using Dynamical mean field theory we can treat it as a dimer impurity
 problem embedded in a self-consistent bath which represents the
-lattice degrees of freedom in mean-field, we can solve this
+remaining lattice degrees of freedom in mean-field, we can solve this
 alternative problem exactly. DMFT is exact in infinite dimensions and
 yields the generic behavior of a high-dimensional lattice, independent
 of the lattice geometry used within the calculation. The energy scales
 are renormalized for different geometries and for simplicity we adopt
-a semicircular density of state and set the energy unit to its
+a semicircular density of states and set the energy unit to its
 half-bandwidth $D$.
 
 I first show you a zero temperature phase diagram, where the color
 scale is the density of states at the Fermi level and we have captured
-the competition between electronic correlations giving rise to the
-metal to Mott insulator transition which is first order in character,
-as displayed by this hysteresis region. And at the same time the
-transition produced by dimerization taking you smoothly from a metal
-to a band insulator. The intermediate region conects this two types of
-insulator you can still see a first order transition to the mott
-insulator and how this is connected to the band insulator
+the competition between electronic correlations which take you from a
+Metal here in yellow to a Mott insulator over here in blue as the
+onsite interaction strength is increased. This transition is first
+order in character, as displayed by this hysteresis region. And at the
+same time the transition produced by increasing dimerization takes you
+smoothly from a metal to a band insulator. The intermediate region
+connects this two insulators. You can still see a first order
+transition to the Mott insulator and how this is connected to the band
+insulator
 
 When analyzing The coexistence region in temperature we see that it
 gradually shrinks as temperature is increased. At zero dimerization we
@@ -343,53 +348,67 @@ recover the well known single-band Hubbard model result, where the
 coexistence region is a triangle tilted to the left indicating that
 upon heating you cross the first order line from a correlated Metal to
 an insulator. This behavior has been associated to the transition in
-Cr- doped V_2O_3. As the dimerization strength is increased the
-coexistence region changes its tilt towards the right signaling that
-dimerization changes the stability of the system. At $t_\perp=0.3$ the
-Metal insulator transition is reversed from the previous case enabling
-for a low temperature insulator to turn metallic as temperature is
-risen just like VO_2.
+Cr- doped V_2O_3.
+
+As the dimerization strength is increased the coexistence region
+changes its tilt towards the right signaling that dimerization changes
+the stability of the system. At $t_\perp=0.3$ the Metal insulator
+transition is reversed from the previous case enabling for a low
+temperature insulator to turn metallic as temperature is risen just
+like VO_2.
 
 What can be said about this transition, what makes it different? I'll
 follow a representative quatity, the effective dimerization strength
 which is the bare dimerization energy enhanced by the real Part of the
 intersite self-energy at zero frequency. You can see how it weakly
 enhances the metal at all temperatures, but for the insulator it is
-strongly booosted. This is an electronic dimerization. The structural
+strongly boosted as the Mott gap opens at the 1st order
+transition. This is an electronic dimerization. The structural
 transition is therefore not a reason but is a consequence of the
 electronic transition. It is the arrangement of the system after the
 electrons prefer to Mott localize.
 
-What does it look like? Look at the electronic structure of Insulator
-within the coexistence region, it has incoherent Hubbard bands which
-are the signature of Mott physics. But it also has coherent bands
-coexisting.  The metal shows a split quasiparticle band crossing the
-Fermi energy at w=0, and this quasiparticles can be thought as the
-renormalization of the non-interacting bandstructure. At high energies
-we find the Hubbard bands.
+What does it look like? The electronic structure of Insulator within
+the coexistence region, it has incoherent Hubbard bands which are the
+signature of Mott physics. But it also has coherent bands coexisting,
+they can be linked to those of a lattice if single-dimers. Hence, the
+insulator can be characterized as a novel type of Mott-singlet state
+where the Hubbard bands have a mix character with both coherent and
+incoherent electronic-structure contributions.  The metal shows a
+pair of quasiparticle bands crossing the Fermi energy at w=0, and this
+quasiparticles can be thought as the renormalization of the
+non-interacting bandstructure. At high energies we find the Hubbard
+bands, which are signature of Mott physics in the correlated metal.
 
-How does this link to the transition? In
-the OPtical conductivity the insulator is quite simple between all
-interband and intraband transitions are allowed after overcoming the
-optical gap. But I show you the components of this bonding in
-anti-bonding bands because in the dimer Metal it gives a new
-behavior. Aside from the characteristic Drude response the presence of
-this split quasiparticle peak will allow from an inter band transition
-between this two and excibit this Mid-Infrared-peak. at 0.22eV.
+How does this link to the transition? In the OPtical conductivity the
+insulator is quite simple after overcoming the optical gap there is a
+response. Interband and intraband transitions between bonding and
+anti-bonding bands contribute. I show you the components of this
+bonding in anti-bonding bands because in the dimer Metal it gives a
+new behavior. Aside from the characteristic Drude response expected
+for a Metal the presence of this split quasiparticle peak, one
+quasiparticle in the bonding band and other in the antibonding one
+will allow from an inter band transition between this two and exhibit
+this Mid-Infrared-peak at 0.22eV.
 
-But are there experiments for this? Yes, this experiment conducted in
-Basov's group they perform Infrared spectroscopy on a VO_2 as it is
-heated accross the transition and measure the optical conductivity of
-the Metallic puddles that form, which show a response very different
-from the high temperature rutile metal, they show this MIR peak. This
-is the signature of the dimer metal and our argument why the Mott
-Mechanism dominates the Insulator to metal transition in VO2.
+But are there experiments for this? Yes, In this experiment conducted
+by Basov's group, they perform Infrared spectroscopy on VO_2 as it is
+heated accross the transition. They identify the formation of Metallic
+puddles which emerge in the insulating matrix, this phase coexistence
+is characteristic of a first order transition. Measurements of the
+optical conductivity in the Metallic puddles show a response
+significantly different from the high temperature rutile metal, they
+show this Mid-infra-red response. This is the signature of the dimer
+metal and our argument why the Mott Mechanism dominates the Insulator
+to metal transition in VO2
 
 
 If you are doing pump probe experimens on VO2, were you trigger a
 photo induced transition know that the dimer metal coexist with the
 insulator at all temperatures, look at the optical conductivity and
-look for this peak because is strongly frequency dependent.
+look for this peak because is strongly frequency dependent and the
+signature of a dimerized metal when the lattice has not yet
+experienced any change.
 
 Thank you for you attention, I'm open for questions now and over this
 week. You can read more from our recent publication. Also I'm looking
