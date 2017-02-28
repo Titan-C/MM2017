@@ -38,16 +38,19 @@
   <h2>%d</h2>")
   (org-reveal-export-to-html)
 #+END_SRC
-* The transition in VO$_2$ Peierls vs. Mott
+* The transition in VO$_2$
   :PROPERTIES:
   :Custom_ID: crystal
   :END:
 
 # Image from [[http://dx.doi.org/10.1103/physrevb.81.115117][Lazarovits, B. PRB, 81(11), 115117]]
 #+BEGIN_EXPORT html
-<img height="260px" data-src="images/monoclinic_cell.png">
-<img height="260px" data-src="images/vo2_resistivity_qa_sci.jpg">
-<img height="260px" data-src="images/rutile_cell.png">
+<object height="280px" data="images/monoclinic_cell.svg" type="image/svg+xml">
+Sorry, your browser does not support SVG.</object>
+<img    height="280px" data-src="images/vo2_resistivity_qa_sci.jpg">
+<object height="280px" data="images/rutile_cell.svg" type="image/svg+xml">
+Sorry, your browser does not support SVG.</object>
+<h2>Peierls vs Mott</h2>
 #+END_EXPORT
 #+BEGIN_NOTES
 VO_2 is a very interesting transition metal oxide because it displays
@@ -66,19 +69,17 @@ where the insulating behavior is attributed to this spin-Peierls
 structural instability.
 #+END_NOTES
 * Outline
-- Solve a reference model: The Dimer Hubbard Model
-  - Characterize the correlated Insulator to correlated Metal
-    transition using DMFT
-- Dimer-Mott Transition explains key experiments in the transition of VO_2
+
+#+ATTR_REVEAL: :frag (appear)
+    * Solve a reference model: The Dimer Hubbard Model
+    * Characterize the correlated Insulator to correlated Metal
+      transition using DMFT
+    * Dimer-Mott Transition explains key experiments in the transition of VO$_2$
+
 * The Dimer Hubbard model
-#+attr_html: :height 400px
+#+attr_html: :height 600px
 [[file:images/dimer_lattice.svg]]
-\begin{align}
-H=[ -t \sum_{\langle i, j\rangle \alpha\sigma}
-c^\dagger_{i\alpha\sigma} c_{j\alpha \sigma} +\ t_{\perp}
-\sum_{i\sigma} c^\dagger_{i1\sigma} c_{i2\sigma} + h.c. ]
-+ \sum_{i\alpha} U n_{i\alpha\uparrow} n_{i\alpha\downarrow}
-\end{align}
+
 #+BEGIN_NOTES
 For our study we trade the complications of the real crystal structure
 and the orbital degeneracy of VO_2 for a model Hamiltonian where we
@@ -99,7 +100,7 @@ experiments.
   :PROPERTIES:
   :Custom_ID: dmft
   :END:
-#+attr_html: :height 400px
+#+attr_html: :height 420px
 [[file:images/dimer_lattice_dmft.svg]]
 
 \begin{equation}
@@ -115,42 +116,51 @@ i\omega_n  & -t_\perp \\
 - t^2 \mathbf{G}(i\omega_n),
 \end{equation}
 
-* Phase diagram $T=0$
-[[file:images/IPT_dimerT0.png]]
-** $t_\perp/D=0$
+Solved Exactly in the Bethe lattice
+
+* DMFT Phase diagram at $T=0$
+  :PROPERTIES:
+  :Custom_ID: T0PD
+  :END:
+#+attr_html: :height 600px
+[[file:images/IPT_dimerT0.svg]]
+** The case $t_\perp/D=0$ no dimers "reference" Mott transition V\(_2\)O_3
   :PROPERTIES:
   :Custom_ID: ssdiag
   :END:
 #+BEGIN_EXPORT html
-<div style="position: absolute; width: 250px; height: 200px; left: 20px; top: 20px;">
+<div style="position: absolute; width: 250px; height: 200px; left: 20px; top: 80px;">
   <div style="z-index: 12;">
     <img data-src="images/IPT_dimerT0l0.png"></div></div>
 #+END_EXPORT
-[[file:images/IPT_dimertp0.png]]
+#+attr_html: :height 600px
+[[file:images/IPT_dimertp0.svg]]
 
-** $t_\perp/D=0.3$
+** The dimerized $t_\perp/D=0.3$ lattice the Dimer-Mott transition
 
 #+BEGIN_EXPORT html
-<div style="position: absolute; width: 250px; height: 200px; left: 20px; top: 20px;">
+<div style="position: absolute; width: 250px; height: 200px; left: 20px; top: 80px;">
   <div style="z-index: 12;">
     <img data-src="images/IPT_dimerT0l3.png"></div></div>
 #+END_EXPORT
-[[file:images/IPT_dimertp03.png]]
+#+attr_html: :height 600px
+[[file:images/IPT_dimertp03.svg]]
 
 ** Effective Dimerization
   :PROPERTIES:
   :Custom_ID: tpeff
   :END:
 #+BEGIN_EXPORT html
-<div style="position: absolute; width: 250px; height: 200px; left: 620px; top: 60px;">
+<div style="position: absolute; width: 250px; height: 200px; left: 620px; top: 80px;">
   <div style="z-index: 12;">
     <img data-src="images/IPT_dimertp03_ss.png"></div></div>
 #+END_EXPORT
-[[file:images/IPT_tpeff.png]]
-
+#+attr_html: :height 600px
+[[file:images/IPT_tpeff.svg]]
+The Effect of correlation is to enhance dimerization
 * Electronic Structure
 #+attr_html: :height 550px
-file:images/fig-arpes-ipt.png
+file:images/arpes.svg
 
 ** Optical conductivity
 
@@ -224,59 +234,72 @@ file:images/fig-arpes-ipt.png
       gsta = gf.semi_circle_hiltrans(w + tp - (sa.real - 1j * np.abs(sa.imag)))
       gloc = 0.5 * (gsta + gsts)
 
-      axe[0].plot(w, -gloc.imag / np.pi)
+      axe[0].plot(w, -gsta.imag / np.pi)
+      axe[0].plot(w, -gsts.imag / np.pi)
       axe[0].set_xlim(-3, 3)
-      axe[1].plot(w, -gsta.imag / np.pi)
-      axe[1].plot(w, -gsts.imag / np.pi)
-      axe[1].set_xlim(-3, 3)
 
       sm_a, sm_i, sm, nuv = optical_cond(ss, sa, tp, w, beta)
-      axe[2].plot(nuv, sm_a, '--')
-      axe[2].plot(nuv, sm_i, ':')
-      axe[2].plot(nuv, sm, '-')
-      axe[2].set_xlim(0, 2)
+      axe[1].plot(nuv, sm_a, 'C2--')
+      axe[1].plot(nuv, sm_i, 'C3:')
+      axe[1].plot(nuv, sm, 'C4-')
+      axe[1].set_xlim(0, 2)
 
 
   def label(ax):
-      ax[0].set_ylabel(r'$A_{11}(\omega)$')
-      ax[1].set_ylabel(r'$A_{B/A}(\omega)$')
-      ax[2].set_ylabel(r'$\sigma(\omega)$')
+      ax[0].set_ylabel(r'$A_{B/A}(\omega)$')
+      ax[1].set_ylabel(r'$\sigma(\omega)$')
       ax[0].set_xlabel(r'$\omega$')
       ax[1].set_xlabel(r'$\omega$')
-      ax[2].set_xlabel(r'$\omega$')
 
   # fig, ax = plt.subplots(3, 2, sharex=True, sharey=True)
-  fig, ax = plt.subplots(2, 3, figsize=(10, 8), sharey=True)
+  fig, ax = plt.subplots(2, 2, figsize=(12, 8), sharey=True)
 
-  fig.subplots_adjust(hspace=0.04)
   w_set = np.arange(150)
   w = np.linspace(-3, 3, 1000)
   plot_spectra_multi(2.5, .3, 100, 'met', ax[0])
   plot_spectra_multi(2.5, .3, 100, 'ins', ax[1])
   label(ax[0])
   label(ax[1])
-  ax[0, 2].set_ylim(0, 0.7)
-  ax[0, 2].annotate(r"MIR $\omega \approx 0.22$ eV",
+  ax[0, 1].set_ylim(0, 0.7)
+  ax[0, 1].annotate(r"MIR $\omega \approx 0.22$ eV",
                     xy=(0.23, 0.62), arrowprops=dict(arrowstyle='->'), xytext=(0.42, 0.6))
-  plt.savefig('images/IPT_AB_spectra.png')
+  fig.subplots_adjust(hspace=0.1, wspace=0.1)
+  plt.savefig('images/IPT_AB_spectra.svg')
 #+END_SRC
 #+attr_html: :height 550px :width 960px
-[[file:images/IPT_AB_spectra.png]]
+[[file:images/IPT_AB_spectra.svg]]
 * Optical conductivity at the transition
   :PROPERTIES:
   :Custom_ID: SNIM
   :END:
-
-[[http://dx.doi.org/10.1126/science.1150124][Qazilbash et al., Science (2007), 318(5857), 1750–1753]]
 #+BEGIN_EXPORT html
-<img src="images/SNIM-heat.jpg" alt="SNIM-heat.jpg" height="260px" />
-<img src="images/vo2_lowe_optics_qa_sci.jpg" alt="vo2_lowe_optics_qa_sci.jpg" height="260px" />
-<img src="images/expm_optics.png" alt="expm_optics.png" height="260px" />
-<img src="images/vo2_trans_optics.jpg" alt="Optical conductivity at the transition" height="220px" />
+<img src="images/SNIM-heat.jpg" alt="SNIM-heat.jpg" height="460px" />
+<img src="images/expm_optics.png" alt="expm_optics.png" height="460px" />
 #+END_EXPORT
-* Thank you for your attention
+- [[http://dx.doi.org/10.1126/science.1150124][Qazilbash et al., Science (2007), 318(5857), 1750–1753]]
+- [[http://dx.doi.org/10.1103/physrevb.95.035113][O. Nájera, et al. (2017). PRB, 95(3), 035113]]
+* Conclusions
 
-Read more on : [[http://dx.doi.org/10.1103/physrevb.95.035113][O. Nájera, et al. (2017). PRB, 95(3), 035113]]
+#+ATTR_REVEAL: :frag (appear)
+- The Dimer Hubbard Model describes a temperature driven insulator to
+  correlated metal transition
+- These results naturally explain key observations in the temperature
+  driven transition in VO_2, explaining the Mid-Infrared features in
+  the optical conductivity *before the structural transition takes
+  place*
+- The underlying Dimer metal meta-stable in the Monoclinic phase must
+  still be clearly identified, but this Pump-Probe experiment
+  hints to its existence. [[https://doi.org/10.1126/science.1253779][Morrison et al. (2014) Science, 346(6208), 445–448.]]
+    #+attr_html: :height 200px
+    [[file:images/morrison_sci_pump_probe.svg]]
+
+- Read more about our work in: [[http://dx.doi.org/10.1103/physrevb.95.035113][O. Nájera, et al. (2017). PRB, 95(3), 035113]]
+* Optics Support
+#+BEGIN_EXPORT html
+<img src="images/vo2_lowe_optics_qa_sci.jpg" alt="vo2_lowe_optics_qa_sci.jpg" height="300px" />
+<img src="images/vo2_trans_optics.jpg" alt="Optical conductivity at the transition" height="300px" />
+#+END_EXPORT
+
 * Script                                                           :noexport:
 
 Good morning everyone. I'm Oscar Najera and do my PhD with Marcelo
