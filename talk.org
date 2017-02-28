@@ -163,7 +163,9 @@ The Effect of correlation is to enhance dimerization
 file:images/arpes.svg
 
 ** Optical conductivity
-
+#+BEGIN_EXPORT html
+<h2>Mid Infrared Peak appears in Correlated Metal</h2>
+#+END_EXPORT
 #+BEGIN_SRC python :exports none :results silent
   from __future__ import (absolute_import, division, print_function,
                           unicode_literals)
@@ -274,7 +276,8 @@ file:images/arpes.svg
   :END:
 #+BEGIN_EXPORT html
 <img src="images/SNIM-heat.jpg" alt="SNIM-heat.jpg" height="460px" />
-<img src="images/expm_optics.png" alt="expm_optics.png" height="460px" />
+<object height="460px" data="images/expm_optics.svg" type="image/svg+xml">
+Sorry, your browser does not support SVG.</object>
 #+END_EXPORT
 - [[http://dx.doi.org/10.1126/science.1150124][Qazilbash et al., Science (2007), 318(5857), 1750–1753]]
 - [[http://dx.doi.org/10.1103/physrevb.95.035113][O. Nájera, et al. (2017). PRB, 95(3), 035113]]
