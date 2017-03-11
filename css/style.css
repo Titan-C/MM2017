@@ -1,7 +1,22 @@
-.reveal {font-size: 28px;}
+.reveal { font-size: 28px; }
 
 .reveal section img {border: 0;}
 
-#sec-title-slide .title {font-size: 3.5em;}
-#sec-title-slide .authors {font-size: 2em;}
-#sec-title-slide .affiliation {font-size: 0.82em;}
+#sec-title-slide .title {
+    font-size: 2.6em;
+    font-weight: bold;
+    margin: 0;
+}
+
+#sec-title-slide .subtitle {
+    font-size: 1.45em;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+}
+
+#sec-title-slide .authors {font-size: 1.75em;}
+#sec-title-slide .affiliation {font-size: 0.8em;}
+
+#conclusion object {float: left;
+                    height: 300px;
+                    margin-right: 25px;}
