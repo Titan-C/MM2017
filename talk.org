@@ -1,4 +1,4 @@
-#+TITLE:  Resolving the chicken-and-egg problem in VO$_2$
+#+TITLE:  Resolving the chicken-and-egg problem in VO_2
 #+subtitle: A new paradigm for the Mott transition
 #+AUTHOR: Óscar Nájera
 #+EMAIL: najera.oscar@gmail.com
@@ -16,9 +16,10 @@
 # #+REVEAL_ROOT: https://cdn.jsdelivr.net/reveal.js/3.0.0/
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="css/style.css" />
 #+REVEAL_EXTRA_CSS: https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css
-
+#+REVEAL_MARGIN: 0.1
 #+OPTIONS: num:nil email:t toc:nil
-# #+OPTIONS: reveal_width:1200 reveal_height:800
+#+OPTIONS: reveal_width:1366 reveal_height:768
+#+OPTIONS: tex:dvisvgm
 # Export the title
 #+BEGIN_SRC emacs-lisp :results silent :exports none
   (setq org-reveal-title-slide "
@@ -31,14 +32,14 @@
       <sup>1</sup> Laboratoire de Physique des Solides, CNRS-UMR8502, Université Paris-Sud, Orsay 91405, France</br>
       <sup>2</sup> Department of Physics and National High Magnetic Field Laboratory, Florida State University, Tallahassee, FL 32306, USA</h4>
 
-  <!-- <h3><i class=\"fa fa-envelope\" aria-hidden=\"true\"></i> %e / <a href=\"http://github.com/Titan-C\">
+  <h3><i class=\"fa fa-envelope\" aria-hidden=\"true\"></i> %e / <a href=\"http://github.com/Titan-C\">
   <i class=\"fa fa-github\" aria-hidden=\"true\"></i>
-  Titan-C</a></h3> -->
+  Titan-C</a></h3>
 
   <h2>%d</h2>")
   (org-reveal-export-to-html)
 #+END_SRC
-* The transition in VO$_2$
+* The transition in VO_2
   :PROPERTIES:
   :Custom_ID: crystal
   :END:
@@ -74,12 +75,22 @@ structural instability.
     * Solve a reference model: The Dimer Hubbard Model
     * Characterize the correlated Insulator to correlated Metal
       transition using DMFT
-    * Dimer-Mott Transition explains key experiments in the transition of VO$_2$
+    * Dimer-Mott Transition explains key experiments in the transition of VO_2
 
 * The Dimer Hubbard model
-#+attr_html: :height 600px
-[[file:images/dimer_lattice.svg]]
-
+#+BEGIN_EXPORT html
+<svg height="620px" viewBox="0 0 234.34749 200.67273">
+  <svg class="fragment" data-fragment-index="0" viewBox="0 0 234.34749 200.67273">
+    <use xlink:href="images/dimer_bethe_lattice_fra.svg#lattice">
+  </svg>
+  <svg class="fragment" data-fragment-index="1" viewBox="0 0 234.34749 200.67273">
+    <use xlink:href="images/dimer_bethe_lattice_fra.svg#dimerization">
+  </svg>
+  <svg class="fragment" data-fragment-index="2" viewBox="0 0 234.34749 200.67273">
+    <use xlink:href="images/dimer_bethe_lattice_fra.svg#interaction">
+  </svg>
+</svg>
+#+END_EXPORT
 #+BEGIN_NOTES
 For our study we trade the complications of the real crystal structure
 and the orbital degeneracy of VO_2 for a model Hamiltonian where we
