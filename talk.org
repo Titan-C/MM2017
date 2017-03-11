@@ -19,7 +19,6 @@
 #+REVEAL_MARGIN: 0.1
 #+OPTIONS: num:nil email:t toc:nil
 #+OPTIONS: reveal_width:1366 reveal_height:768
-#+OPTIONS: tex:dvisvgm
 # Export the title
 #+BEGIN_SRC emacs-lisp :results silent :exports none
   (setq org-reveal-title-slide "
@@ -107,27 +106,16 @@ the physics of VO_2. We will explore the physical nature of the
 different electronic states and relate our results to key available
 experiments.
 #+END_NOTES
-** Dynamical Mean Field Theory of the Dimer Hubbard Model
+** Dynamical Mean Field Theory (DMFT)
   :PROPERTIES:
   :Custom_ID: dmft
   :END:
-#+attr_html: :height 420px
+#+attr_html: :height 470px
 [[file:images/dimer_lattice_dmft.svg]]
+- Exact by construction in the large coordination limit
+- DMFT yields generic behavior of a high-dimensional lattice
+- Solved Exactly in the Bethe lattice
 
-\begin{equation}
-\label{eq:dimer_dmft}
-S_{eff}[\mathbf{c}_\sigma,\mathbf{c}^*_\sigma]=\Sigma_{\sigma,i\omega_n}\mathbf{c}^*_{n\sigma}\mathbf{G}_0^{-1}\mathbf{c}_{n\sigma}+U\int_0^\beta d\tau \Sigma_{\alpha=1,2} n_{\alpha,\uparrow}n_{\alpha,\downarrow}
-\end{equation}
-
-\begin{equation}
-\label{eq:dimer_weiss}
-\mathbf{G}_0^{-1}(i\omega_n)= \left( \begin{array}{cc}
-i\omega_n  & -t_\perp \\
--t_\perp  &  i\omega_n \end{array} \right)
-- t^2 \mathbf{G}(i\omega_n),
-\end{equation}
-
-Solved Exactly in the Bethe lattice
 
 * DMFT Phase diagram at $T=0$
   :PROPERTIES:
