@@ -24,11 +24,11 @@
      pagecolor="#ffffff"
      bordercolor="#666666"
      borderopacity="1.0"
-     inkscape:pageopacity="0.0"
+     inkscape:pageopacity="1"
      inkscape:pageshadow="2"
      inkscape:zoom="1.5778075"
      inkscape:cx="318.90801"
-     inkscape:cy="253.23757"
+     inkscape:cy="253.50882"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -37,9 +37,9 @@
      fit-margin-right="0"
      fit-margin-bottom="0"
      inkscape:window-width="1916"
-     inkscape:window-height="1047"
+     inkscape:window-height="1038"
      inkscape:window-x="0"
-     inkscape:window-y="29"
+     inkscape:window-y="38"
      inkscape:window-maximized="1" />
   <metadata
      id="metadata5">
@@ -58,16 +58,24 @@
      inkscape:groupmode="layer"
      id="layer1"
      transform="translate(-27.39572,1.7135516)">
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.79374999;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect4587"
+       width="145.21997"
+       height="26.159718"
+       x="27.228029"
+       y="-1.7134918"
+       ry="0" />
     <image
        sodipodi:absref="/home/oscar/Dropbox/org/phd/dimer_lattice/aps_march_meeting/images/IPT_dimerT0.png"
        xlink:href="IPT_dimerT0.png"
-       y="15.543818"
-       x="27.39572"
-       id="image4609"
-       style="image-rendering:optimizeQuality"
-       preserveAspectRatio="none"
+       width="144.78"
        height="113.87666"
-       width="144.78" />
+       preserveAspectRatio="none"
+       style="image-rendering:optimizeQuality"
+       id="image4609"
+       x="27.39572"
+       y="15.543818" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#ff0000;stroke-width:0.79374999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="M 47.121032,56.364126 C 67.094898,55.041727 79.759951,72.853507 109.66959,78.666963"
@@ -105,29 +113,29 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:6.61458302px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="42.487865"
-       y="21.427797"
+       x="41.314034"
+       y="21.092417"
        id="text4655"><tspan
          sodipodi:role="line"
          id="tspan4653"
-         x="42.487865"
-         y="21.427797"
+         x="41.314034"
+         y="21.092417"
          style="fill:#ff0000;fill-opacity:1;stroke-width:0.26458332px">MI</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:6.61458302px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="90.07972"
-       y="-25.322298"
+       x="87.67244"
+       y="-33.905746"
        id="text4659"
-       transform="rotate(35.749617)"><tspan
+       transform="rotate(39.868557)"><tspan
          sodipodi:role="line"
          id="tspan4657"
-         x="90.07972"
-         y="-25.322298"
+         x="87.67244"
+         y="-33.905746"
          style="fill:#ff0000;fill-opacity:1;stroke-width:0.26458332px">INSULATOR</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:6.61458302px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#0e00ff;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:6.61458302px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#0e00ff;fill-opacity:1;stroke:none;stroke-width:0.52916667;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none;"
        x="50.7047"
        y="104.09921"
        id="text4663"><tspan
@@ -135,7 +143,7 @@
          id="tspan4661"
          x="50.7047"
          y="104.09921"
-         style="fill:#0e00ff;fill-opacity:1;stroke-width:0.26458332px">METAL</tspan></text>
+         style="fill:#0e00ff;fill-opacity:1;stroke-width:0.52916667;stroke:none;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none;">METAL</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:6.61458302px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"

@@ -10,15 +10,47 @@
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="147.53166mm"
+   width="253.36617mm"
    height="113.87666mm"
-   viewBox="0 0 147.53166 113.87666"
+   viewBox="0 0 253.36616 113.87666"
    version="1.1"
    id="svg9858"
    inkscape:version="0.92.1 r"
    sodipodi:docname="IPT_dimertp0.svg">
   <defs
-     id="defs9852" />
+     id="defs9852">
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="marker6551"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:#ff1000;fill-opacity:1;fill-rule:evenodd;stroke:#ff1000;stroke-width:1.00000003pt;stroke-opacity:1"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path6549"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Mend"
+       style="overflow:visible"
+       inkscape:isstock="true"
+       inkscape:collect="always">
+      <path
+         id="path5349"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#ff1000;fill-opacity:1;fill-rule:evenodd;stroke:#ff1000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+  </defs>
   <sodipodi:namedview
      id="base"
      pagecolor="#ffffff"
@@ -27,15 +59,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.3754673"
-     inkscape:cx="6.9178825"
+     inkscape:cx="513.65771"
      inkscape:cy="187.10645"
      inkscape:document-units="mm"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="layer2"
      showgrid="false"
      inkscape:window-width="1916"
-     inkscape:window-height="1047"
+     inkscape:window-height="1038"
      inkscape:window-x="0"
-     inkscape:window-y="29"
+     inkscape:window-y="38"
      inkscape:window-maximized="1"
      fit-margin-top="0"
      fit-margin-left="0"
@@ -49,7 +81,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -61,13 +93,13 @@
     <image
        sodipodi:absref="/home/oscar/Dropbox/org/phd/dimer_lattice/aps_march_meeting/images/IPT_dimertp0.png"
        xlink:href="IPT_dimertp0.png"
-       width="147.53166"
-       height="113.87666"
-       preserveAspectRatio="none"
-       style="image-rendering:optimizeQuality"
-       id="image10579"
+       y="7.2283378"
        x="14.680598"
-       y="7.2283378" />
+       id="image10579"
+       style="image-rendering:optimizeQuality"
+       preserveAspectRatio="none"
+       height="113.87666"
+       width="147.53166" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#ff0000;stroke-width:0.79374999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 96.564152,103.67934 -0.38472,-27.699683 c 6.233338,10.478986 13.144118,20.416019 21.928918,28.853833"
@@ -100,26 +132,75 @@
          id="tspan10608">CROSSOVER</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:6.61458302px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#2b00ff;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
-       x="43.149708"
-       y="97.829575"
+       style="font-style:normal;font-weight:normal;font-size:15.56467152px;line-height:9.72791958px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#2b00ff;fill-opacity:1;stroke:none;stroke-width:0.38911676px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="53.817631"
+       y="102.44619"
        id="text12052"><tspan
          sodipodi:role="line"
          id="tspan12050"
-         x="43.149708"
-         y="97.829575"
-         style="fill:#2b00ff;fill-opacity:1;stroke-width:0.26458332px;">METAL</tspan></text>
+         x="53.817631"
+         y="102.44619"
+         style="fill:#2b00ff;fill-opacity:1;stroke-width:0.38911676px">METAL</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:6.61458302px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="-97.584305"
-       y="134.82849"
+       style="font-style:normal;font-weight:normal;font-size:11.76323605px;line-height:7.35202217px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:0.29408088px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="-26.59399"
+       y="131.26193"
        id="text12056"
-       transform="rotate(-88.845807)"><tspan
+       transform="rotate(-66.083036)"><tspan
          sodipodi:role="line"
          id="tspan12054"
-         x="-97.584305"
-         y="134.82849"
-         style="fill:#ff0000;fill-opacity:1;stroke-width:0.26458332px">INSULATOR</tspan></text>
+         x="-26.59399"
+         y="131.26193"
+         style="fill:#ff0000;fill-opacity:1;stroke-width:0.29408088px">INSULATOR</tspan></text>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#ff1000;stroke-width:1.32291663;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
+       d="m 103.35803,99.945518 1.73123,-20.390032"
+       id="path5338"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="refresh">
+    <image
+       sodipodi:absref="/home/oscar/Dropbox/org/phd/dimer_lattice/aps_march_meeting/images/V2O3_exp.jpg"
+       xlink:href="V2O3_exp.jpg"
+       width="105.83451"
+       height="113.7597"
+       preserveAspectRatio="none"
+       id="image6502"
+       x="147.53166"
+       y="0.11696621" />
+    <text
+       id="text6507"
+       y="66.364021"
+       x="192.11786"
+       style="font-style:normal;font-weight:normal;font-size:11.07896042px;line-height:6.92435026px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#2b00ff;fill-opacity:1;stroke:none;stroke-width:0.27697399px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="fill:#2b00ff;fill-opacity:1;stroke-width:0.27697399px"
+         y="66.364021"
+         x="192.11786"
+         id="tspan6505"
+         sodipodi:role="line">METAL</tspan></text>
+    <text
+       transform="rotate(-70.526728)"
+       id="text6513"
+       y="187.7126"
+       x="4.3832951"
+       style="font-style:normal;font-weight:normal;font-size:10.36880589px;line-height:6.48050308px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:0.25922012px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="fill:#ff0000;fill-opacity:1;stroke-width:0.25922012px"
+         y="187.7126"
+         x="4.3832951"
+         id="tspan6511"
+         sodipodi:role="line">INSULATOR</tspan></text>
+    <path
+       sodipodi:nodetypes="cc"
+       inkscape:connector-curvature="0"
+       id="path6547"
+       d="M 190.05055,63.863346 188.31932,37.70255"
+       style="fill:none;fill-rule:evenodd;stroke:#ff1000;stroke-width:1.32291663;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker6551)" />
   </g>
 </svg>

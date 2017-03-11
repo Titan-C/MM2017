@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Resolving the chicken-and-egg problem in VO<sub>2</sub></title>
+<meta name="author" content="(Óscar Nájera)"/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="/css/reveal.css"/>
+
+<link rel="stylesheet" href="/css/theme/serif.css" id="theme"/>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"/>
+
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = '/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide">
+
+<h1 class="title">Resolving the chicken-and-egg problem in VO<sub>2</sub></h1>
+<h2 class="subtitle">A new paradigm for the Mott transition</h2>
+
+<h2 class="authors"><u><b>Óscar Nájera</b></u><sup>1</sup>, M. Civelli<sup>1</sup>,<br> V. Dobrosavljević<sup>2</sup>, M. J. Rozenberg<sup>1</sup></h2>
+<h3><i class="fa fa-envelope" aria-hidden="true"></i> <a href="mailto:najera.oscar@gmail.com">najera.oscar@gmail.com</a> / <a href="http://github.com/Titan-C">
+<i class="fa fa-github" aria-hidden="true"></i>
+Titan-C</a></h3>
+
+  <h4 class="affiliation">
+    <sup>1</sup> Laboratoire de Physique des Solides, CNRS-UMR8502, Université Paris-Sud, Orsay 91405, France</br>
+    <sup>2</sup> Department of Physics and National High Magnetic Field Laboratory, Florida State University, Tallahassee, FL 32306, USA</h4>
+
+
+<h2>March 13, 2017 - New Orleans</h2>
+</section>
+<section>
+<section id="slide-crystal">
+<h2 id="crystal"><a id="org1664a33"></a>The transition in VO<sub>2</sub></h2>
+<object height="280px" data="images/monoclinic_cell.svg" type="image/svg+xml">
+Sorry, your browser does not support SVG.</object>
+<img    height="280px" data-src="images/vo2_resistivity_qa_sci.jpg">
+<object height="280px" data="images/rutile_cell.svg" type="image/svg+xml">
+Sorry, your browser does not support SVG.</object>
+<h2>Peierls vs Mott</h2>
+<aside class="notes">
+<p>
+VO<sub>2</sub> is a very interesting transition metal oxide because it displays
+a Metal insulator transition close to room temperature. Making it
+attractive for novel electronic devices. Explaining this transition
+remains a challenging endeavor, between our hand waving arguments to our
+most sophisticated bandstructure calculations great progress has been
+made to describe this material but not enough to settle the debate
+about the origins of its transition. VO<sub>2</sub> is a correlated metal at
+high temperature and one would argue for Mott transition to justify
+the insulator, where electrons localize due to the strong Coulomb
+repulsion they experience between eachother. Nevertheless at the
+transition temperature the crystal structure changes from rutile to
+Monoclinic and dimers form and inspire an alternative justification
+where the insulating behavior is attributed to this spin-Peierls
+structural instability.
+</p>
+
+</aside>
+</section>
+</section>
+<section>
+<section id="slide-org1d962fb">
+<h2 id="org1d962fb">Outline</h2>
+<ul>
+<li class="fragment appear">Solve a reference model: The Dimer Hubbard Model</li>
+<li class="fragment appear">Characterize the correlated Insulator to correlated Metal
+transition using DMFT</li>
+<li class="fragment appear">Dimer-Mott Transition explains key experiments in the transition of VO<sub>2</sub></li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-org1907e5f">
+<h2 id="org1907e5f">The Dimer Hubbard model</h2>
+<svg height="600px" viewBox="0 0 234.34749 200.67273">
+  <svg class="fragment" data-fragment-index="0" viewBox="0 0 234.34749 200.67273">
+    <use xlink:href="images/dimer_bethe_lattice_fra.svg#lattice">
+  </svg>
+  <svg class="fragment" data-fragment-index="1" viewBox="0 0 234.34749 200.67273">
+    <use xlink:href="images/dimer_bethe_lattice_fra.svg#dimerization">
+  </svg>
+  <svg class="fragment" data-fragment-index="2" viewBox="0 0 234.34749 200.67273">
+    <use xlink:href="images/dimer_bethe_lattice_fra.svg#interaction">
+  </svg>
+</svg>
+<aside class="notes">
+<p>
+For our study we trade the complications of the real crystal structure
+and the orbital degeneracy of VO<sub>2</sub> for a model Hamiltonian where we
+focus on just few things. Take the fact that there is a preferred
+direction in the unit cell which gives the raise to dimer and build a
+single orbital Hubbard model out of it, the Dimer Hubbard Model. It
+will capture the key competition between Mott localization due to
+coulomb repulsion and the singlet dimerization. We will explore if a
+purely electronic transition takes place in this model, for which in
+this study the lattice will stay fixed. We will address the question
+if this purely electronic transition is of first order as a function
+of temperature within a relevant parameter region, having a bearing on
+the physics of VO<sub>2</sub>. We will explore the physical nature of the
+different electronic states and relate our results to key available
+experiments.
+</p>
+
+</aside>
+</section>
+</section>
+<section>
+<section id="slide-dmft">
+<h2 id="dmft"><a id="org7071581"></a>Dynamical Mean Field Theory (DMFT)</h2>
+
+<div class="figure">
+<p><object type="image/svg+xml" data="images/dimer_lattice_dmft.svg" class="org-svg" height="470px">
+Sorry, your browser does not support SVG.</object>
+</p>
+</div>
+<ul>
+<li>Exact by construction in the large coordination limit</li>
+<li>DMFT yields generic behavior of a high-dimensional lattice</li>
+<li>Solved Exactly in the Bethe lattice</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-T0PD">
+<h2 id="T0PD"><a id="orgfb6fb07"></a>DMFT Phase diagram at \(T=0\)</h2>
+
+<div class="figure">
+<p><object type="image/svg+xml" data="images/IPT_dimerT0.svg" class="org-svg" height="450px">
+Sorry, your browser does not support SVG.</object>
+</p>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-ssdiag">
+<h2 id="ssdiag"><a id="org0859269"></a>Reference Mott transition: V\(_2\)O<sub>3</sub></h2>
+
+<div class="figure">
+<p><object type="image/svg+xml" data="images/IPT_dimertp0.svg" class="org-svg" height="420px">
+Sorry, your browser does not support SVG.</object>
+</p>
+</div>
+
+<p>
+The case \(t_\perp/D=0\) no dimers
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org0eeb60f">
+<h2 id="org0eeb60f">The Dimer-Mott transition: VO<sub>2</sub></h2>
+
+<div class="figure">
+<p><object type="image/svg+xml" data="images/IPT_dimertp03.svg" class="org-svg" height="500px">
+Sorry, your browser does not support SVG.</object>
+</p>
+</div>
+
+<p>
+The dimerized \(t_\perp/D=0.3\) lattice
+</p>
+</section>
+</section>
+<section>
+<section id="slide-tpeff">
+<h2 id="tpeff"><a id="orgeedb8ad"></a>The Effect of correlation is to enhance dimerization</h2>
+
+<div class="figure">
+<p><object type="image/svg+xml" data="images/IPT_tpeff.svg" class="org-svg" height="500px">
+Sorry, your browser does not support SVG.</object>
+</p>
+</div>
+</section>
+</section>
+<section>
+<section id="slide-org60f0c4d">
+<h2 id="org60f0c4d">Electronic Structure</h2>
+
+<div class="figure">
+<p><object type="image/svg+xml" data="images/arpes.svg" class="org-svg" height="550px">
+Sorry, your browser does not support SVG.</object>
+</p>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org8c0c2c0">
+<h2 id="org8c0c2c0">Mid Infrared Peak appears in Correlated Metal</h2>
+
+<div class="figure">
+<p><object type="image/svg+xml" data="images/IPT_AB_spectra.svg" class="org-svg" height="550px" width="960px">
+Sorry, your browser does not support SVG.</object>
+</p>
+</div>
+</section>
+</section>
+<section>
+<section id="slide-SNIM">
+<h2 id="SNIM"><a id="org942774c"></a>Optical conductivity at the transition</h2>
+<img src="images/SNIM-heat.jpg" alt="SNIM-heat.jpg" height="460px" />
+<object height="460px" data="images/expm_optics.svg" type="image/svg+xml">
+Sorry, your browser does not support SVG.</object>
+<ul>
+<li><a href="http://dx.doi.org/10.1126/science.1150124">Qazilbash et al., Science (2007), 318(5857), 1750–1753</a></li>
+<li><a href="http://dx.doi.org/10.1103/physrevb.95.035113">O. Nájera, et al. (2017). PRB, 95(3), 035113</a></li>
+
+</ul>
+<aside class="notes">
+<p>
+add theory experiment in the optics plot
+</p>
+
+</aside>
+</section>
+</section>
+<section>
+<section id="slide-orgb322af6">
+<h2 id="orgb322af6">Conclusions</h2>
+<ul id="conclusion">
+<li class="fragment appear">The Dimer Hubbard Model describes a temperature driven insulator to
+metal <b><font color = "red">correlated transition</font></b></li>
+<li class="fragment appear">These results explain key observations in the transition in VO<sub>2</sub>: the Mid-Infrared features in
+the optical conductivity <b>before the structural transition takes
+place</b></li>
+<li class="fragment appear">The existence of a metastable correlated dimer metal phase is the
+key ingredient that shows that the VO<sub>2</sub> Insulator Metal transition
+is electronically driven(Dimer Mott Mechanism)</li>
+<li class="fragment appear"><object type="image/svg+xml" data="images/morrison_sci_pump_probe.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object> This Dimer metal phase must
+still be clearly identified, but this Pump-Probe experiment points into this
+direction. <a href="https://doi.org/10.1126/science.1253779">Morrison et al. (2014) Science, 346(6208), 445–448.</a></li>
+<li class="fragment appear">Read more about our work in: <a href="http://dx.doi.org/10.1103/physrevb.95.035113">O. Nájera, et al. (2017). PRB, 95(3), 035113</a></li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-org6dd2fdb">
+<h2 id="org6dd2fdb">Optics Support</h2>
+<img src="images/vo2_lowe_optics_qa_sci.jpg" alt="vo2_lowe_optics_qa_sci.jpg" height="300px" />
+<img src="images/vo2_trans_optics.jpg" alt="Optical conductivity at the transition" height="300px" />
+</section>
+</section>
+</div>
+</div>
+<script src="/lib/js/head.min.js"></script>
+<script src="/js/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+
+controls: true,
+progress: true,
+history: false,
+center: true,
+slideNumber: 'c',
+rollingLinks: false,
+keyboard: true,
+overview: true,
+margin: 0.10,
+
+theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+transition: Reveal.getQueryHash().transition || 'slide', // default/cube/page/concave/zoom/linear/fade/none
+transitionSpeed: 'default',
+multiplex: {
+    secret: '', // null if client
+    id: '', // id, obtained from socket.io server
+    url: '' // Location of socket.io server
+},
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+ { src: '/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
+});
+</script>
+</body>
+</html>

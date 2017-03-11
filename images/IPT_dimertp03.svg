@@ -18,7 +18,23 @@
    inkscape:version="0.92.1 r"
    sodipodi:docname="IPT_dimertp03.svg">
   <defs
-     id="defs10653" />
+     id="defs10653">
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Mend"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path5349"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#ff0000;fill-opacity:1;fill-rule:evenodd;stroke:#ff0000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+  </defs>
   <sodipodi:namedview
      id="base"
      pagecolor="#ffffff"
@@ -27,15 +43,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.2264583"
-     inkscape:cx="141.8304"
+     inkscape:cx="475.67376"
      inkscape:cy="246.62857"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="1916"
-     inkscape:window-height="1047"
+     inkscape:window-height="1038"
      inkscape:window-x="0"
-     inkscape:window-y="29"
+     inkscape:window-y="38"
      inkscape:window-maximized="1"
      fit-margin-top="0"
      fit-margin-left="0"
@@ -49,7 +65,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -57,39 +73,41 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-4.8532147,-4.2045279)">
+     transform="translate(-4.8532147,-4.2045279)"
+     style="display:inline">
     <image
        sodipodi:absref="/home/oscar/Dropbox/org/phd/dimer_lattice/aps_march_meeting/images/IPT_dimertp03.png"
        xlink:href="IPT_dimertp03.png"
-       y="4.2045279"
-       x="4.8532147"
-       id="image11412"
-       style="image-rendering:optimizeQuality"
-       preserveAspectRatio="none"
+       width="147.53166"
        height="113.87666"
-       width="147.53166" />
+       preserveAspectRatio="none"
+       style="image-rendering:optimizeQuality"
+       id="image11412"
+       x="4.8532147"
+       y="4.2045279" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:6.61458302px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#0000fa;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
-       x="32.143707"
-       y="91.841171"
-       id="text11417"><tspan
+       style="font-style:normal;font-weight:normal;font-size:13.71724987px;line-height:8.57328129px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#0000fa;fill-opacity:1;stroke:none;stroke-width:0.34293124px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="14.404492"
+       y="93.603256"
+       id="text11417"
+       transform="rotate(-22.472618)"><tspan
          sodipodi:role="line"
          id="tspan11415"
-         x="32.143707"
-         y="91.841171"
-         style="fill:#0000fa;fill-opacity:1;stroke-width:0.26458332px;">METAL</tspan></text>
+         x="14.404492"
+         y="93.603256"
+         style="fill:#0000fa;fill-opacity:1;stroke-width:0.34293124px">METAL</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:7.29288387px;line-height:4.55805254px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:0.1823221px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="-60.679512"
-       y="139.95929"
+       style="font-style:normal;font-weight:normal;font-size:10.30309677px;line-height:6.43943548px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:0.25757742px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="9.7184954"
+       y="135.44705"
        id="text11421"
-       transform="rotate(-72.585012)"><tspan
+       transform="matrix(0.77605326,-0.62748028,0.61602904,0.79047916,0,0)"><tspan
          sodipodi:role="line"
-         x="-60.679512"
-         y="139.95929"
-         style="fill:#ff0000;fill-opacity:1;stroke-width:0.1823221px"
+         x="9.7184954"
+         y="135.44705"
+         style="fill:#ff0000;fill-opacity:1;stroke-width:0.25757742px"
          id="tspan11423">INSULATOR</tspan></text>
     <path
        style="fill:none;fill-rule:evenodd;stroke:#ff0000;stroke-width:0.79374999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -103,5 +121,29 @@
        id="path11429"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#ff0000;stroke-width:1.32291663;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
+       d="M 88.98775,91.114992 V 69.973493"
+       id="path8026"
+       inkscape:connector-curvature="0" />
+    <path
+       transform="translate(4.8532147,4.2045279)"
+       style="fill:none;fill-rule:evenodd;stroke:#006200;stroke-width:1.32291663;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1.32291667, 1.32291667;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 95.352473,2.5602002 C 92.020815,3.2777771 91.512672,62.854831 96.539684,65.20077 105.00385,55.500034 115.2045,50.788633 123.82878,46.784764"
+       id="path8208"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccc" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:9.2571497px;line-height:5.42411089px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ff0a0a;fill-opacity:1;stroke:none;stroke-width:0.21696444px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="-6.2389665"
+       y="114.51034"
+       id="text8794"
+       transform="rotate(-66.656009,5.6235919,-1.5879609)"><tspan
+         sodipodi:role="line"
+         id="tspan8792"
+         x="-6.2389665"
+         y="114.51034"
+         style="fill:#ff0a0a;fill-opacity:1;stroke-width:0.21696444px">crossover</tspan></text>
   </g>
 </svg>

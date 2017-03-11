@@ -18,7 +18,7 @@
 #+REVEAL_EXTRA_CSS: https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css
 #+REVEAL_MARGIN: 0.1
 #+OPTIONS: num:nil email:t toc:nil
-#+OPTIONS: reveal_width:1366 reveal_height:768
+# #+OPTIONS: reveal_width:1366 reveal_height:700
 # Export the title
 #+BEGIN_SRC emacs-lisp :results silent :exports none
   (setq org-reveal-title-slide "
@@ -26,17 +26,19 @@
   <h1 class=\"title\">%t</h1>
   <h2 class=\"subtitle\">%s</h2>
 
-  <h2 class=\"authors\"><u><b>%a</b></u><sup>1</sup>, M. Civelli<sup>1</sup>, V. Dobrosavljević<sup>2</sup>, M. J. Rozenberg<sup>1</sup></h2>
-    <h4 class=\"affiliation\">
-      <sup>1</sup> Laboratoire de Physique des Solides, CNRS-UMR8502, Université Paris-Sud, Orsay 91405, France</br>
-      <sup>2</sup> Department of Physics and National High Magnetic Field Laboratory, Florida State University, Tallahassee, FL 32306, USA</h4>
-
+  <h2 class=\"authors\"><u><b>%a</b></u><sup>1</sup>, M. Civelli<sup>1</sup>,<br> V. Dobrosavljević<sup>2</sup>, M. J. Rozenberg<sup>1</sup></h2>
   <h3><i class=\"fa fa-envelope\" aria-hidden=\"true\"></i> %e / <a href=\"http://github.com/Titan-C\">
   <i class=\"fa fa-github\" aria-hidden=\"true\"></i>
   Titan-C</a></h3>
 
+    <h4 class=\"affiliation\">
+      <sup>1</sup> Laboratoire de Physique des Solides, CNRS-UMR8502, Université Paris-Sud, Orsay 91405, France</br>
+      <sup>2</sup> Department of Physics and National High Magnetic Field Laboratory, Florida State University, Tallahassee, FL 32306, USA</h4>
+
+
   <h2>%d</h2>")
   (org-reveal-export-to-html)
+  (rename-file "talk.html" "index.html" t)
 #+END_SRC
 * The transition in VO_2
   :PROPERTIES:
@@ -78,7 +80,7 @@ structural instability.
 
 * The Dimer Hubbard model
 #+BEGIN_EXPORT html
-<svg height="620px" viewBox="0 0 234.34749 200.67273">
+<svg height="600px" viewBox="0 0 234.34749 200.67273">
   <svg class="fragment" data-fragment-index="0" viewBox="0 0 234.34749 200.67273">
     <use xlink:href="images/dimer_bethe_lattice_fra.svg#lattice">
   </svg>
@@ -106,7 +108,7 @@ the physics of VO_2. We will explore the physical nature of the
 different electronic states and relate our results to key available
 experiments.
 #+END_NOTES
-** Dynamical Mean Field Theory (DMFT)
+* Dynamical Mean Field Theory (DMFT)
   :PROPERTIES:
   :Custom_ID: dmft
   :END:
@@ -116,55 +118,38 @@ experiments.
 - DMFT yields generic behavior of a high-dimensional lattice
 - Solved Exactly in the Bethe lattice
 
-
 * DMFT Phase diagram at $T=0$
   :PROPERTIES:
   :Custom_ID: T0PD
   :END:
-#+attr_html: :height 600px
+#+attr_html: :height 450px
 [[file:images/IPT_dimerT0.svg]]
-** The case $t_\perp/D=0$ no dimers "reference" Mott transition V\(_2\)O_3
+
+* Reference Mott transition: V\(_2\)O_3
   :PROPERTIES:
   :Custom_ID: ssdiag
   :END:
-#+BEGIN_EXPORT html
-<div style="position: absolute; width: 250px; height: 200px; left: 20px; top: 80px;">
-  <div style="z-index: 12;">
-    <img data-src="images/IPT_dimerT0l0.png"></div></div>
-#+END_EXPORT
-#+attr_html: :height 600px
+#+attr_html: :height 420px
 [[file:images/IPT_dimertp0.svg]]
 
-** The dimerized $t_\perp/D=0.3$ lattice the Dimer-Mott transition
+The case $t_\perp/D=0$ no dimers
 
-#+BEGIN_EXPORT html
-<div style="position: absolute; width: 250px; height: 200px; left: 20px; top: 80px;">
-  <div style="z-index: 12;">
-    <img data-src="images/IPT_dimerT0l3.png"></div></div>
-#+END_EXPORT
-#+attr_html: :height 600px
+* The Dimer-Mott transition: VO_2
+#+attr_html: :height 500px
 [[file:images/IPT_dimertp03.svg]]
 
-** Effective Dimerization
+The dimerized $t_\perp/D=0.3$ lattice
+* The Effect of correlation is to enhance dimerization
   :PROPERTIES:
   :Custom_ID: tpeff
   :END:
-#+BEGIN_EXPORT html
-<div style="position: absolute; width: 250px; height: 200px; left: 620px; top: 80px;">
-  <div style="z-index: 12;">
-    <img data-src="images/IPT_dimertp03_ss.png"></div></div>
-#+END_EXPORT
-#+attr_html: :height 600px
+#+attr_html: :height 500px
 [[file:images/IPT_tpeff.svg]]
-The Effect of correlation is to enhance dimerization
 * Electronic Structure
 #+attr_html: :height 550px
 file:images/arpes.svg
 
-** Optical conductivity
-#+BEGIN_EXPORT html
-<h2>Mid Infrared Peak appears in Correlated Metal</h2>
-#+END_EXPORT
+* Mid Infrared Peak appears in Correlated Metal
 #+BEGIN_SRC python :exports none :results silent
   from __future__ import (absolute_import, division, print_function,
                           unicode_literals)
@@ -280,21 +265,23 @@ Sorry, your browser does not support SVG.</object>
 #+END_EXPORT
 - [[http://dx.doi.org/10.1126/science.1150124][Qazilbash et al., Science (2007), 318(5857), 1750–1753]]
 - [[http://dx.doi.org/10.1103/physrevb.95.035113][O. Nájera, et al. (2017). PRB, 95(3), 035113]]
+#+BEGIN_NOTES
+add theory experiment in the optics plot
+#+END_NOTES
 * Conclusions
-
+#+attr_html: :id conclusion
 #+ATTR_REVEAL: :frag (appear)
 - The Dimer Hubbard Model describes a temperature driven insulator to
-  correlated metal transition
-- These results naturally explain key observations in the temperature
-  driven transition in VO_2, explaining the Mid-Infrared features in
+  metal *@@html:<font color = "red">@@correlated transition@@html:</font>@@*
+- These results explain key observations in the transition in VO_2: the Mid-Infrared features in
   the optical conductivity *before the structural transition takes
   place*
-- The underlying Dimer metal meta-stable in the Monoclinic phase must
-  still be clearly identified, but this Pump-Probe experiment
-  hints to its existence. [[https://doi.org/10.1126/science.1253779][Morrison et al. (2014) Science, 346(6208), 445–448.]]
-    #+attr_html: :height 200px
-    [[file:images/morrison_sci_pump_probe.svg]]
-
+- The existence of a metastable correlated dimer metal phase is the
+  key ingredient that shows that the VO_2 Insulator Metal transition
+  is electronically driven(Dimer Mott Mechanism)
+- [[file:images/morrison_sci_pump_probe.svg]] This Dimer metal phase must
+  still be clearly identified, but this Pump-Probe experiment points into this
+  direction. [[https://doi.org/10.1126/science.1253779][Morrison et al. (2014) Science, 346(6208), 445–448.]]
 - Read more about our work in: [[http://dx.doi.org/10.1103/physrevb.95.035113][O. Nájera, et al. (2017). PRB, 95(3), 035113]]
 * Optics Support
 #+BEGIN_EXPORT html

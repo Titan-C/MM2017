@@ -1,4 +1,8 @@
-.reveal { font-size: 28px; }
+body {
+  background: #fff;
+  background-color: #fff; }
+
+.reveal { font-size: 29px; }
 
 .reveal section img {border: 0;}
 
