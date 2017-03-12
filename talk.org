@@ -12,7 +12,7 @@
 #+REVEAL_PLUGINS: (notes)
 #+REVEAL_TRANS: slide
 #+REVEAL_THEME: serif
-#+REVEAL_ROOT: /
+#+REVEAL_ROOT:
 # #+REVEAL_ROOT: https://cdn.jsdelivr.net/reveal.js/3.0.0/
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="css/style.css" />
 #+REVEAL_EXTRA_CSS: https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css
