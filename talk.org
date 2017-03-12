@@ -73,9 +73,9 @@ structural instability.
 * Outline
 
 #+ATTR_REVEAL: :frag (appear)
-    * Solve a reference model: The Dimer Hubbard Model
+    * Solve using DMFT a reference model: The Dimer Hubbard Model
     * Characterize the correlated Insulator to correlated Metal
-      transition using DMFT
+      transition
     * Dimer-Mott Transition explains key experiments in the transition of VO_2
 
 * The Dimer Hubbard model
@@ -122,7 +122,7 @@ experiments.
   :PROPERTIES:
   :Custom_ID: T0PD
   :END:
-#+attr_html: :height 450px
+#+attr_html: :height 500px
 [[file:images/IPT_dimerT0.svg]]
 
 * Reference Mott transition: V\(_2\)O_3
@@ -291,66 +291,62 @@ add theory experiment in the optics plot
 
 * Script                                                           :noexport:
 
-Good morning everyone. I'm Oscar Najera and do my PhD with Marcelo
-Rozenberg in the laboratoire the Physique des solides in Paris. I will
-be presenting our work towards resolving the chicken-and-egg problem
-in VO_2, and present to you a new paradigm for the Mott transition.
+Good morning everyone. I'm Oscar Najera and do my PhD under the
+supervision of Marcelo Rozenberg at the laboratoire the Physique des
+solides in Paris. I will present our work towards resolving the
+chicken-and-egg problem in VO_2, and present to you a new paradigm for
+the Mott transition. You can contact me anytime at
+najera.oscar@gmail.com
 
-VO_2 is a very interesting transition metal oxide because it displays
-a Metal insulator transition close to room temperature. Making it
-attractive for novel electronic devices. Explaining this transition
-remains a challenging endeavor, between our hand waving arguments to
-our most sophisticated bandstructure calculations great progress has
-been made to describe this material but not enough to settle the
-debate about the origins of its transition. VO_2 is a correlated metal
-at high temperature with a rutile crystal structure and one would
-argue for a Mott transition to justify the insulating behavior at low
-temperatures, where electrons localize due to the strong Coulomb
-repulsion they experience between each other.
+Which is the chicken-and-egg problem?  VO_2 experiences a first order
+metal-insulator transition with temperature. VO_2 is and insulator at
+low temperatures with a monoclinic crystal structure where Vanadium
+atoms in red form dimers. At the transition the crystal structure
+changes to rutile, the dimers vanish, and the metal shows clear
+evidence of strong electronic correlations. Which is the mechanism
+behind this transition? Is it the Peirls Instability where the dimers
+have formed or are broken? Or is it the strong electronic correlations
+and the Mott mechanism responsible for the transition. This is a
+long-standing debate, this is our chicken-and-egg problem: which is
+the leading mechanism? who is responsible for triggering the
+transition? And I'll share our current understanding of this
+transition.
 
-Nevertheless at the transition temperature the crystal structure
-changes from rutile to Monoclinic and dimers form which has inspired
-an alternative justification to the insulating behavior and attribute
-it to this spin-Peierls structural instability.
+In a brief outline of this talk. I'll introduce you to the dimer
+Hubbard Model and presents its solution in the framework of Dynamical
+mean field theory. Then I characterize the correlated Insulator to
+correlated Metal transition and finally I'll link this results of the
+Dimer-Mott transition to explain key experimental observations in the
+transition of VO_2
 
-For our study we trade the complications of the real crystal structure
-and the orbital degeneracy of VO$_2$ for a model Hamiltonian where we
-focus on just few things. Take the fact that there is a preferred
-direction in the unit cell which gives the raise to dimer and build a
-single orbital Hubbard model out of it, the Dimer Hubbard Model. Where
-you have electron hopping between the lattice sites, a dimerization
-energy and an onsite Hubbard repulsion. This model will capture the
-key competition between Mott localization due to Coulomb repulsion and
-the singlet dimerization. We will explore if a purely electronic
-transition takes place in this model, for which in this study the
-lattice will stay fixed. We will address the question if this purely
-electronic transition is of first order as a function of temperature
-within a relevant parameter region, having a bearing on the physics of
-VO_2. We will explore the physical nature of the different electronic
-states it presents and relate our results to key available experiments.
+- For the purpose of constructing a model that can be solved exactly I
+  take a Bethe Lattice which has a semi-circular density of states,
+  which a half-bandwidth D=2t, the the lattice hopping. And we set
+  this as the energy unit of our system.
+- But the unit cell is the dimer, with a preferred hopping direction
+  t_\perp, this dimerization induces the formation of the bonding and
+  anti-bonding bands.
+- Then the matter of this talk is: what happens when we include
+  on-site Coulomb repulsion U? and see the effects of correlation.
+- Important! Lattice stays fixed!
 
-The presented lattice model as such is currently imposible to solve.
-Using Dynamical mean field theory we can treat it as a dimer impurity
-problem embedded in a self-consistent bath which represents the
-remaining lattice degrees of freedom in mean-field, we can solve this
-alternative problem exactly. DMFT is exact in infinite dimensions and
-yields the generic behavior of a high-dimensional lattice, independent
-of the lattice geometry used within the calculation. The energy scales
-are renormalized for different geometries and for simplicity we adopt
-a semicircular density of states and set the energy unit to its
-half-bandwidth $D$.
+To solve the previous model we use Dynamical Mean Field Theory(DMFT)
+That let's us focus on a single dimer unit cell and treat the rest of
+the lattice degrees of freedom in mean field. It's a quantum dimer
+impurity problem embedded in a self-consistent bath.(read points)
 
-I first show you a zero temperature phase diagram, where the color
-scale is the density of states at the Fermi level and we have captured
-the competition between electronic correlations which take you from a
-Metal here in yellow to a Mott insulator over here in blue as the
-onsite interaction strength is increased. This transition is first
-order in character, as displayed by this hysteresis region. And at the
-same time the transition produced by increasing dimerization takes you
-smoothly from a metal to a band insulator. The intermediate region
-connects this two insulators. You can still see a first order
-transition to the Mott insulator and how this is connected to the band
-insulator
+
+I first show you a zero temperature phase diagram, where here and the
+following color plots the color scale is the density of states at the
+Fermi level. Here we have captured the competition between electronic
+correlations which take you from a Metal here in yellow to a Mott
+insulator over here in blue as the onsite interaction strength is
+increased. This transition is first order in character, as displayed
+by this hysteresis region. And at the same time the transition
+produced by increasing dimerization takes you smoothly from a metal to
+a band insulator. The intermediate region connects this two
+insulators. You can still see a first order transition to the Mott
+insulator and how this is connected to the band insulator
 
 When analyzing The coexistence region in temperature we see that it
 gradually shrinks as temperature is increased. At zero dimerization we
