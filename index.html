@@ -48,7 +48,7 @@ Titan-C</a></h3>
 </section>
 <section>
 <section id="slide-crystal">
-<h2 id="crystal"><a id="org468dbf3"></a>The transition in VO<sub>2</sub></h2>
+<h2 id="crystal"><a id="org3d0a2ce"></a>The transition in VO<sub>2</sub></h2>
 <object height="280px" data="images/monoclinic_cell.svg" type="image/svg+xml">
 Sorry, your browser does not support SVG.</object>
 <img    height="280px" data-src="images/vo2_resistivity_qa_sci.jpg">
@@ -77,8 +77,8 @@ structural instability.
 </section>
 </section>
 <section>
-<section id="slide-orgf485370">
-<h2 id="orgf485370">Outline</h2>
+<section id="slide-orga810c09">
+<h2 id="orga810c09">Outline</h2>
 <ul>
 <li class="fragment appear">Solve using DMFT a reference model: The Dimer Hubbard Model</li>
 <li class="fragment appear">Characterize the correlated Insulator to correlated Metal
@@ -90,19 +90,22 @@ transition</li>
 </section>
 </section>
 <section>
-<section id="slide-orgc9f1378">
-<h2 id="orgc9f1378">The Dimer Hubbard model</h2>
-<svg height="600px" viewBox="0 0 234.34749 200.67273">
-  <svg class="fragment" data-fragment-index="0" viewBox="0 0 234.34749 200.67273">
-    <use xlink:href="images/dimer_bethe_lattice_fra.svg#lattice">
-  </svg>
-  <svg class="fragment" data-fragment-index="1" viewBox="0 0 234.34749 200.67273">
-    <use xlink:href="images/dimer_bethe_lattice_fra.svg#dimerization">
-  </svg>
-  <svg class="fragment" data-fragment-index="2" viewBox="0 0 234.34749 200.67273">
-    <use xlink:href="images/dimer_bethe_lattice_fra.svg#interaction">
-  </svg>
-</svg>
+<section id="slide-dmft">
+<h2 id="dmft"><a id="org54876dc"></a>Dynamical Mean Field Theory (DMFT)</h2>
+
+<div class="figure">
+<p><object type="image/svg+xml" data="images/dimer_dmft.svg" class="org-svg" height="440px">
+Sorry, your browser does not support SVG.</object>
+</p>
+</div>
+<ul>
+<li>DMFT Exact by construction in the large coordination limit</li>
+<li>DMFT yields generic behavior of a high-dimensional lattice</li>
+<li>Solved Exactly in the Bethe Lattice</li>
+<li>Same cluster impurity problem as other LDA+DMFT studies for VO<sub>2</sub></li>
+
+</ul>
+
 <aside class="notes">
 <p>
 For our study we trade the complications of the real crystal structure
@@ -121,30 +124,20 @@ different electronic states and relate our results to key available
 experiments.
 </p>
 
+<p>
+Emphasize that you are using the <b>same</b> cluster-impurity model as in the
+LDA+DMFT studies. We simplify the geometry and the multi-orbital
+nature, which is known to be qualitatively OK from extensive single
+site studies (ie LDA+DMFT in single site always give the 3-peak
+structure or the incoherent Mott insulator)
+</p>
+
 </aside>
 </section>
 </section>
 <section>
-<section id="slide-dmft">
-<h2 id="dmft"><a id="orge5de7de"></a>Dynamical Mean Field Theory (DMFT)</h2>
-
-<div class="figure">
-<p><object type="image/svg+xml" data="images/dimer_lattice_dmft.svg" class="org-svg" height="470px">
-Sorry, your browser does not support SVG.</object>
-</p>
-</div>
-<ul>
-<li>Exact by construction in the large coordination limit</li>
-<li>DMFT yields generic behavior of a high-dimensional lattice</li>
-<li>Solved Exactly in the Bethe lattice</li>
-
-</ul>
-
-</section>
-</section>
-<section>
 <section id="slide-T0PD">
-<h2 id="T0PD"><a id="orgef21781"></a>DMFT Phase diagram at \(T=0\)</h2>
+<h2 id="T0PD"><a id="org893efb9"></a>DMFT Phase diagram at \(T=0\)</h2>
 
 <div class="figure">
 <p><object type="image/svg+xml" data="images/IPT_dimerT0.svg" class="org-svg" height="500px">
@@ -156,7 +149,7 @@ Sorry, your browser does not support SVG.</object>
 </section>
 <section>
 <section id="slide-ssdiag">
-<h2 id="ssdiag"><a id="org7f2a1fb"></a>Reference Mott transition: V\(_2\)O<sub>3</sub></h2>
+<h2 id="ssdiag"><a id="orgdeacbd2"></a>Reference Mott transition: V\(_2\)O<sub>3</sub></h2>
 
 <div class="figure">
 <p><object type="image/svg+xml" data="images/IPT_dimertp0.svg" class="org-svg" height="420px">
@@ -171,11 +164,11 @@ The case \(t_\perp/D=0\) no dimers
 </section>
 </section>
 <section>
-<section id="slide-org9ec65bc">
-<h2 id="org9ec65bc">The Dimer-Mott transition: VO<sub>2</sub></h2>
+<section id="slide-org377fa89">
+<h2 id="org377fa89">The Dimer-Mott transition: VO<sub>2</sub></h2>
 
 <div class="figure">
-<p><object type="image/svg+xml" data="images/IPT_dimertp03.svg" class="org-svg" height="500px">
+<p><object type="image/svg+xml" data="images/IPT_dimertp03.svg" class="org-svg" height="520px">
 Sorry, your browser does not support SVG.</object>
 </p>
 </div>
@@ -183,34 +176,60 @@ Sorry, your browser does not support SVG.</object>
 <p>
 The dimerized \(t_\perp/D=0.3\) lattice
 </p>
+
+<aside class="notes">
+<p>
+Our approach is the opposite to Goodeneough. He argue from the high-T
+to low-T and expect a structural transition opening the gap. We start
+with a low-T lattice and a Mott insulator and ask if the system may
+become a correlated metal. We can do this with modern techniques
+unavailable in the time of Goodenough.
+</p>
+
+</aside>
 </section>
 </section>
 <section>
 <section id="slide-tpeff">
-<h2 id="tpeff"><a id="org0379eea"></a>The Effect of correlation is to enhance dimerization</h2>
+<h2 id="tpeff"><a id="org48095c4"></a>The Effect of correlation is to enhance dimerization</h2>
 
 <div class="figure">
 <p><object type="image/svg+xml" data="images/IPT_tpeff.svg" class="org-svg" height="500px">
 Sorry, your browser does not support SVG.</object>
 </p>
 </div>
+<aside class="notes">
+<p>
+This is an electronic dimerization. The structural
+transition is therefore not a reason but is a consequence of the
+electronic transition. It is the arrangement of the system after the
+electrons prefer to Mott localize.
+</p>
+
+</aside>
 </section>
 </section>
 <section>
-<section id="slide-orgd116618">
-<h2 id="orgd116618">Electronic Structure</h2>
+<section id="slide-orgced79dc">
+<h2 id="orgced79dc">Electronic Structure</h2>
 
 <div class="figure">
 <p><object type="image/svg+xml" data="images/arpes.svg" class="org-svg" height="550px">
 Sorry, your browser does not support SVG.</object>
 </p>
 </div>
+<aside class="notes">
+<p>
+emphasize novel structure in the Hubbard bands, unlike the single
+band, here they have a mix on coherent and incoherent parts.
+</p>
 
+</aside>
 </section>
 </section>
 <section>
-<section id="slide-org8905961">
-<h2 id="org8905961">Mid Infrared Peak appears in Correlated Metal</h2>
+<section id="slide-orgf78c953">
+<h2 id="orgf78c953">Mid Infrared Peak appears in Correlated Metal</h2>
 
 <div class="figure">
 <p><object type="image/svg+xml" data="images/IPT_AB_spectra.svg" class="org-svg" height="550px" width="960px">
@@ -221,11 +240,13 @@ Sorry, your browser does not support SVG.</object>
 </section>
 <section>
 <section id="slide-SNIM">
-<h2 id="SNIM"><a id="org93e5236"></a>Optical conductivity at the transition</h2>
-<img src="images/SNIM-heat.jpg" alt="SNIM-heat.jpg" height="460px" />
-<object height="460px" data="images/expm_optics.svg" type="image/svg+xml">
+<h2 id="SNIM"><a id="org27e90e4"></a>Optical conductivity at the transition</h2>
+<img src="images/SNIM-heat.jpg" alt="SNIM-heat.jpg" height="430px" />
+<object height="430px" data="images/expm_optics.svg" type="image/svg+xml">
 Sorry, your browser does not support SVG.</object>
 <ul>
+<li>Metallic \(\sigma(w)\) is only from the metallic islands. The high
+\(T\) rutile metal does not have a MIR peak</li>
 <li><a href="http://dx.doi.org/10.1126/science.1150124">Qazilbash et al., Science (2007), 318(5857), 1750–1753</a></li>
 <li><a href="http://dx.doi.org/10.1103/physrevb.95.035113">O. Nájera, et al. (2017). PRB, 95(3), 035113</a></li>
 
@@ -239,8 +260,8 @@ add theory experiment in the optics plot
 </section>
 </section>
 <section>
-<section id="slide-orgc07feec">
-<h2 id="orgc07feec">Conclusions</h2>
+<section id="slide-org02268ef">
+<h2 id="org02268ef">Conclusions</h2>
 <ul id="conclusion">
 <li class="fragment appear">The Dimer Hubbard Model describes a temperature driven insulator to
 metal <b><font color = "red">correlated transition</font></b></li>
@@ -250,18 +271,14 @@ place</b></li>
 <li class="fragment appear">The existence of a metastable correlated dimer metal phase is the
 key ingredient that shows that the VO<sub>2</sub> Insulator Metal transition
 is electronically driven(Dimer Mott Mechanism)</li>
-<li class="fragment appear"><object type="image/svg+xml" data="images/morrison_sci_pump_probe.svg" class="org-svg">
-Sorry, your browser does not support SVG.</object> This Dimer metal phase must
-still be clearly identified, but this Pump-Probe experiment points into this
-direction. <a href="https://doi.org/10.1126/science.1253779">Morrison et al. (2014) Science, 346(6208), 445–448.</a></li>
 <li class="fragment appear">Read more about our work in: <a href="http://dx.doi.org/10.1103/physrevb.95.035113">O. Nájera, et al. (2017). PRB, 95(3), 035113</a></li>
 
 </ul>
 </section>
 </section>
 <section>
-<section id="slide-orgad49361">
-<h2 id="orgad49361">Optics Support</h2>
+<section id="slide-org0ca9fef">
+<h2 id="org0ca9fef">Optics Support</h2>
 <img src="images/vo2_lowe_optics_qa_sci.jpg" alt="vo2_lowe_optics_qa_sci.jpg" height="300px" />
 <img src="images/vo2_trans_optics.jpg" alt="Optical conductivity at the transition" height="300px" />
 </section>

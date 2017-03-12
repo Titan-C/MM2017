@@ -78,20 +78,17 @@ structural instability.
       transition
     * Dimer-Mott Transition explains key experiments in the transition of VO_2
 
-* The Dimer Hubbard model
-#+BEGIN_EXPORT html
-<svg height="600px" viewBox="0 0 234.34749 200.67273">
-  <svg class="fragment" data-fragment-index="0" viewBox="0 0 234.34749 200.67273">
-    <use xlink:href="images/dimer_bethe_lattice_fra.svg#lattice">
-  </svg>
-  <svg class="fragment" data-fragment-index="1" viewBox="0 0 234.34749 200.67273">
-    <use xlink:href="images/dimer_bethe_lattice_fra.svg#dimerization">
-  </svg>
-  <svg class="fragment" data-fragment-index="2" viewBox="0 0 234.34749 200.67273">
-    <use xlink:href="images/dimer_bethe_lattice_fra.svg#interaction">
-  </svg>
-</svg>
-#+END_EXPORT
+* Dynamical Mean Field Theory (DMFT)
+  :PROPERTIES:
+  :Custom_ID: dmft
+  :END:
+#+attr_html: :height 440px
+[[file:images/dimer_dmft.svg]]
+- DMFT Exact by construction in the large coordination limit
+- DMFT yields generic behavior of a high-dimensional lattice
+- Solved Exactly in the Bethe Lattice
+- Same cluster impurity problem as other LDA+DMFT studies for VO_2
+
 #+BEGIN_NOTES
 For our study we trade the complications of the real crystal structure
 and the orbital degeneracy of VO_2 for a model Hamiltonian where we
@@ -107,17 +104,13 @@ of temperature within a relevant parameter region, having a bearing on
 the physics of VO_2. We will explore the physical nature of the
 different electronic states and relate our results to key available
 experiments.
-#+END_NOTES
-* Dynamical Mean Field Theory (DMFT)
-  :PROPERTIES:
-  :Custom_ID: dmft
-  :END:
-#+attr_html: :height 470px
-[[file:images/dimer_lattice_dmft.svg]]
-- Exact by construction in the large coordination limit
-- DMFT yields generic behavior of a high-dimensional lattice
-- Solved Exactly in the Bethe lattice
 
+Emphasize that you are using the *same* cluster-impurity model as in the
+LDA+DMFT studies. We simplify the geometry and the multi-orbital
+nature, which is known to be qualitatively OK from extensive single
+site studies (ie LDA+DMFT in single site always give the 3-peak
+structure or the incoherent Mott insulator)
+#+END_NOTES
 * DMFT Phase diagram at $T=0$
   :PROPERTIES:
   :Custom_ID: T0PD
@@ -135,20 +128,37 @@ experiments.
 The case $t_\perp/D=0$ no dimers
 
 * The Dimer-Mott transition: VO_2
-#+attr_html: :height 500px
+#+attr_html: :height 520px
 [[file:images/IPT_dimertp03.svg]]
 
 The dimerized $t_\perp/D=0.3$ lattice
+
+#+BEGIN_NOTES
+Our approach is the opposite to Goodeneough. He argue from the high-T
+to low-T and expect a structural transition opening the gap. We start
+with a low-T lattice and a Mott insulator and ask if the system may
+become a correlated metal. We can do this with modern techniques
+unavailable in the time of Goodenough.
+#+END_NOTES
 * The Effect of correlation is to enhance dimerization
   :PROPERTIES:
   :Custom_ID: tpeff
   :END:
 #+attr_html: :height 500px
 [[file:images/IPT_tpeff.svg]]
+#+BEGIN_NOTES
+This is an electronic dimerization. The structural
+transition is therefore not a reason but is a consequence of the
+electronic transition. It is the arrangement of the system after the
+electrons prefer to Mott localize.
+#+END_NOTES
 * Electronic Structure
 #+attr_html: :height 550px
 file:images/arpes.svg
-
+#+BEGIN_NOTES
+emphasize novel structure in the Hubbard bands, unlike the single
+band, here they have a mix on coherent and incoherent parts.
+#+END_NOTES
 * Mid Infrared Peak appears in Correlated Metal
 #+BEGIN_SRC python :exports none :results silent
   from __future__ import (absolute_import, division, print_function,
@@ -259,10 +269,12 @@ file:images/arpes.svg
   :Custom_ID: SNIM
   :END:
 #+BEGIN_EXPORT html
-<img src="images/SNIM-heat.jpg" alt="SNIM-heat.jpg" height="460px" />
-<object height="460px" data="images/expm_optics.svg" type="image/svg+xml">
+<img src="images/SNIM-heat.jpg" alt="SNIM-heat.jpg" height="430px" />
+<object height="430px" data="images/expm_optics.svg" type="image/svg+xml">
 Sorry, your browser does not support SVG.</object>
 #+END_EXPORT
+- Metallic \(\sigma(w)\) is only from the metallic islands. The high
+  $T$ rutile metal does not have a MIR peak
 - [[http://dx.doi.org/10.1126/science.1150124][Qazilbash et al., Science (2007), 318(5857), 1750–1753]]
 - [[http://dx.doi.org/10.1103/physrevb.95.035113][O. Nájera, et al. (2017). PRB, 95(3), 035113]]
 #+BEGIN_NOTES
@@ -279,9 +291,6 @@ add theory experiment in the optics plot
 - The existence of a metastable correlated dimer metal phase is the
   key ingredient that shows that the VO_2 Insulator Metal transition
   is electronically driven(Dimer Mott Mechanism)
-- [[file:images/morrison_sci_pump_probe.svg]] This Dimer metal phase must
-  still be clearly identified, but this Pump-Probe experiment points into this
-  direction. [[https://doi.org/10.1126/science.1253779][Morrison et al. (2014) Science, 346(6208), 445–448.]]
 - Read more about our work in: [[http://dx.doi.org/10.1103/physrevb.95.035113][O. Nájera, et al. (2017). PRB, 95(3), 035113]]
 * Optics Support
 #+BEGIN_EXPORT html
@@ -294,8 +303,8 @@ add theory experiment in the optics plot
 Good morning everyone. I'm Oscar Najera and do my PhD under the
 supervision of Marcelo Rozenberg at the laboratoire the Physique des
 solides in Paris. I will present our work towards resolving the
-chicken-and-egg problem in VO_2, and present to you a new paradigm for
-the Mott transition. You can contact me anytime at
+chicken-and-egg problem in VO_2, and introduce to you a new paradigm
+for the Mott transition. You can contact me anytime at
 najera.oscar@gmail.com
 
 Which is the chicken-and-egg problem?  VO_2 experiences a first order
@@ -308,7 +317,7 @@ behind this transition? Is it the Peirls Instability where the dimers
 have formed or are broken? Or is it the strong electronic correlations
 and the Mott mechanism responsible for the transition. This is a
 long-standing debate, this is our chicken-and-egg problem: which is
-the leading mechanism? who is responsible for triggering the
+the leading mechanism? what is responsible for triggering the
 transition? And I'll share our current understanding of this
 transition.
 
@@ -321,7 +330,7 @@ transition of VO_2
 
 - For the purpose of constructing a model that can be solved exactly I
   take a Bethe Lattice which has a semi-circular density of states,
-  which a half-bandwidth D=2t, the the lattice hopping. And we set
+  which a half-bandwidth D=2t, t the lattice hopping. And we set
   this as the energy unit of our system.
 - But the unit cell is the dimer, with a preferred hopping direction
   t_\perp, this dimerization induces the formation of the bonding and
