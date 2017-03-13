@@ -2,24 +2,24 @@ body {
   background: #fff;
   background-color: #fff; }
 
-.reveal { font-size: 29px; }
+.reveal { font-size: 31px; }
 
 .reveal section img {border: 0;}
 
 #sec-title-slide .title {
-    font-size: 1.6em;
+    font-size: 1.8em;
     font-weight: bold;
     margin: 0;
 }
 
 #sec-title-slide .subtitle {
-    font-size: 1.6em;
+    font-size: 1.8em;
     font-weight: bold;
     margin: 0 0 10px 0;
 }
 
 #sec-title-slide .authors {font-size: 1.6em;}
-#sec-title-slide .affiliation {font-size: 0.8em;}
+#sec-title-slide .affiliation {font-size: 0.9em;}
 
 .reveal h2 { font-size: 2em; }
 

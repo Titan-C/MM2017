@@ -18,8 +18,10 @@
 #+REVEAL_EXTRA_CSS: https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css
 #+REVEAL_MARGIN: 0.1
 #+OPTIONS: num:nil email:t toc:nil
-# #+OPTIONS: reveal_width:1366 reveal_height:700
+#+OPTIONS: reveal_width:1200 reveal_height:750
 # Export the title
+# (/ 1200.0 800.0)
+# (/ 1200.0 1.7)
 #+BEGIN_SRC emacs-lisp :results silent :exports none
   (setq org-reveal-title-slide "
 
@@ -84,10 +86,10 @@ structural instability.
   :END:
 #+attr_html: :height 440px
 [[file:images/dimer_dmft.svg]]
+- Same cluster impurity problem as other LDA+DMFT studies for VO_2
+- Solved Exactly in the Bethe Lattice
 - DMFT Exact by construction in the large coordination limit
 - DMFT yields generic behavior of a high-dimensional lattice
-- Solved Exactly in the Bethe Lattice
-- Same cluster impurity problem as other LDA+DMFT studies for VO_2
 
 #+BEGIN_NOTES
 For our study we trade the complications of the real crystal structure
@@ -302,24 +304,22 @@ add theory experiment in the optics plot
 
 Good morning everyone. I'm Oscar Najera and do my PhD under the
 supervision of Marcelo Rozenberg at the laboratoire the Physique des
-solides in Paris. I will present our work towards resolving the
+solides in Paris. +I will present our work towards resolving the
 chicken-and-egg problem in VO_2, and introduce to you a new paradigm
 for the Mott transition. You can contact me anytime at
-najera.oscar@gmail.com
+najera.oscar@gmail.com+
 
-Which is the chicken-and-egg problem?  VO_2 experiences a first order
-metal-insulator transition with temperature. VO_2 is and insulator at
-low temperatures with a monoclinic crystal structure where Vanadium
-atoms in red form dimers. At the transition the crystal structure
-changes to rutile, the dimers vanish, and the metal shows clear
-evidence of strong electronic correlations. Which is the mechanism
-behind this transition? Is it the Peirls Instability where the dimers
-have formed or are broken? Or is it the strong electronic correlations
-and the Mott mechanism responsible for the transition. This is a
-long-standing debate, this is our chicken-and-egg problem: which is
-the leading mechanism? what is responsible for triggering the
-transition? And I'll share our current understanding of this
-transition.
+Which is the chicken-and-egg problem? This thing we cannot disentangle
+the order? VO_2 has a first order metal-insulator transition with
+temperature. VO_2 is an insulator at low temperatures with a
+monoclinic crystal structure where Vanadium atoms in red form
+dimers. At the transition the crystal structure changes to rutile, the
+dimers vanish, and the metal shows clear evidence of strong electronic
+correlations. The mechanism behind this transition has been a long
+standing debate? Is it the Peirls Instability where the dimers have
+formed or are broken? Or is it the strong electronic correlations and
+the Mott mechanism responsible for the transition. I'll share our
+current understanding of this transition.
 
 In a brief outline of this talk. I'll introduce you to the dimer
 Hubbard Model and presents its solution in the framework of Dynamical
@@ -327,6 +327,16 @@ mean field theory. Then I characterize the correlated Insulator to
 correlated Metal transition and finally I'll link this results of the
 Dimer-Mott transition to explain key experimental observations in the
 transition of VO_2
+
+
+To solve a relevant Hubbard model which includes dimerization in the
+lattice we use Dynamical Mean Field Theory(DMFT). That let's us focus
+on a single dimer unit cell and treat the rest of the lattice degrees
+of freedom in mean field. It's a quantum dimer impurity problem
+embedded in a self-consistent bath. This is the same cluster impurity
+problem as other LDA+DMFT studies for VO_2, but here we have traded
+the specific of lattice geometry and multi orbital, to get a minimal
+model that we can thoroughly study.
 
 - For the purpose of constructing a model that can be solved exactly I
   take a Bethe Lattice which has a semi-circular density of states,
@@ -338,12 +348,6 @@ transition of VO_2
 - Then the matter of this talk is: what happens when we include
   on-site Coulomb repulsion U? and see the effects of correlation.
 - Important! Lattice stays fixed!
-
-To solve the previous model we use Dynamical Mean Field Theory(DMFT)
-That let's us focus on a single dimer unit cell and treat the rest of
-the lattice degrees of freedom in mean field. It's a quantum dimer
-impurity problem embedded in a self-consistent bath.(read points)
-
 
 I first show you a zero temperature phase diagram, where here and the
 following color plots the color scale is the density of states at the
