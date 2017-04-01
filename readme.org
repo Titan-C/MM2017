@@ -1,0 +1,34 @@
+#+TITLE:  Talk Presented at APS March Meeting
+#+AUTHOR: Óscar Nájera
+#+EMAIL:  hello@oscarnajera.com
+#+DATE:   2017 March 13
+
+* Resolving the chicken-and-egg problem in VO_2: a new paradigm for the Mott transition
+
+This repository holds the slides of my talk at the [[http://meetings.aps.org/Meeting/MAR17/Session/A37b.1][APS March Meeting]].
+
+To see the slides visit [[http://oscarnajera.com/MM2017]]
+
+You can read more about this work in the following publication
+
+- O. N\'ajera, Civelli, M., V. Dobrosavljevi\'c, & Rozenberg,
+  M. J. (2017). Resolving the VO$_2$ controversy: mott mechanism
+  dominates the insulator-to-metal transition. Physical Review B,
+  95(3), 035113. http://dx.doi.org/10.1103/physrevb.95.035113
+
+To cite this work this you can use this bibtex entry
+#+BEGIN_SRC text
+@article{najera2017_resolving_vo2_controversy,
+  author = {O. N{\'a}jera and M. Civelli and
+                  V. Dobrosavljevi{\'c} and M. J. Rozenberg},
+  title = {Resolving the {VO$_2$} Controversy: Mott Mechanism
+                  Dominates the Insulator-To-Metal Transition},
+  journal = {Physical Review B},
+  volume = 95,
+  number = 3,
+  pages = 035113,
+  year = 2017,
+  doi = {10.1103/physrevb.95.035113},
+  url = {https://doi.org/10.1103/physrevb.95.035113},
+}
+#+END_SRC
