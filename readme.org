@@ -1,4 +1,4 @@
-#+TITLE:  Talk Presented at APS March Meeting
+#+TITLE:  Talk Presented at APS March Meeting 2017
 #+AUTHOR: Óscar Nájera
 #+EMAIL:  hello@oscarnajera.com
 #+DATE:   2017 March 13
@@ -11,8 +11,8 @@ To see the slides visit [[http://oscarnajera.com/MM2017]]
 
 You can read more about this work in the following publication
 
-- O. N\'ajera, Civelli, M., V. Dobrosavljevi\'c, & Rozenberg,
-  M. J. (2017). Resolving the VO$_2$ controversy: mott mechanism
+- O. Nájera, M. Civelli, V. Dobrosavljević, & M. J. Rozenberg,
+  (2017). Resolving the VO_2 controversy: Mott mechanism
   dominates the insulator-to-metal transition. Physical Review B,
   95(3), 035113. http://dx.doi.org/10.1103/physrevb.95.035113
 
